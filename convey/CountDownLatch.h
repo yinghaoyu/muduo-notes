@@ -1,9 +1,11 @@
-#ifndef COUNTDOWNLATCH_H
-#define COUNTDOWNLATCH_H
+#ifndef CONVEY_COUNTDOWNLATCH_H
+#define CONVEY_COUNTDOWNLATCH_H
 
 #include "Condition.h"
 #include "Mutex.h"
 
+namespace convey
+{
 class CountDownLatch : public noncopyable
 {
  public:
@@ -21,5 +23,6 @@ class CountDownLatch : public noncopyable
   Condition m_condition;
   int m_count;
 };
+}  // namespace convey
 
 #endif

@@ -1,6 +1,8 @@
-#ifndef COPYABLE_H
-#define COPYABLE_H
+#ifndef CONVEY_COPYABLE_H
+#define CONVEY_COPYABLE_H
 
+namespace convey
+{
 // reference: https://github.com/chenshuo/muduo/blob/master/muduo/base/copyable.h
 class copyable
 {
@@ -9,5 +11,6 @@ class copyable
   copyable() = default;
   ~copyable() = default;
 };
+}  // namespace convey
 
 #endif

@@ -1,6 +1,8 @@
-#ifndef NONCOPYABLE_H
-#define NONCOPYABLE_H
+#ifndef CONVEY_NONCOPYABLE_H
+#define CONVEY_NONCOPYABLE_H
 
+namespace convey
+{
 class noncopyable
 {
  public:
@@ -15,5 +17,5 @@ class noncopyable
   noncopyable() = default;
   ~noncopyable() = default;
 };
-
+}  // namespace convey
 #endif

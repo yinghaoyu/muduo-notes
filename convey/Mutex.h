@@ -13,42 +13,45 @@
     (void) errnum;       \
   })
 
+namespace convey
+{
 class Mutex : public noncopyable
 {
  public:
-  Mutex() : m_holder(0) { MCHECK(pthread_mutex_init(&m_mutex, NULL)); }
+  Mutex() : holder_(0) { MCHECK(pthread_mutex_init(&mutex_, NULL)); }
   ~Mutex()
   {
-    assert(m_holder == 0);
-    MCHECK(pthread_mutex_destroy(&m_mutex));
+    assert(holder_ == 0);
+    MCHECK(pthread_mutex_destroy(&mutex_));
   }
 
-  void lock() { MCHECK(pthread_mutex_lock(&m_mutex)); }
-  void unlock() { MCHECK(pthread_mutex_unlock(&m_mutex)); }
+  void lock() { MCHECK(pthread_mutex_lock(&mutex_)); }
+  void unlock() { MCHECK(pthread_mutex_unlock(&mutex_)); }
 
-  void detachHolder() { m_holder = 0; }
+  void detachHolder() { holder_ = 0; }
   void attachHolder()
   {
-    m_holder = 0;  // TODO: 实现持有者
+    holder_ = 0;  // TODO: 实现持有者
   }
 
-  pthread_mutex_t *getMutexPtr() { return &m_mutex; }
+  pthread_mutex_t *getMutexPtr() { return &mutex_; }
 
  private:
-  pthread_mutex_t m_mutex;  // 系统分配的锁资源
-  pid_t m_holder;           // 锁的持有者，线程id
+  pthread_mutex_t mutex_;  // 系统分配的锁资源
+  pid_t holder_;           // 锁的持有者，线程id
 };
 
 class MutexGuard : public noncopyable
 {
   // 利用RAII加锁解锁
  public:
-  explicit MutexGuard(Mutex &mutex) : m_mutex(mutex) { mutex.lock(); }
-  ~MutexGuard() { m_mutex.unlock(); }
+  explicit MutexGuard(Mutex &mutex) : mutex_(mutex) { mutex.lock(); }
+  ~MutexGuard() { mutex_.unlock(); }
 
  private:
-  Mutex &m_mutex;  // 这里只是一个引用，不管理生命周期
+  Mutex &mutex_;  // 这里只是一个引用，不管理生命周期
 };
+}  // namespace convey
 
 // 避免匿名对象，这种锁无实际意义
 #define MutexGuard(x) error "Anonymous mutex object"

@@ -1,5 +1,7 @@
 #include "CountDownLatch.h"
 
+using namespace convey;
+
 CountDownLatch::CountDownLatch(int count) : m_mutex(), m_condition(m_mutex), m_count(count) {}
 
 void CountDownLatch::wait()

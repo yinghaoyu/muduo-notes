@@ -1,3 +1,7 @@
 #include "Exception.h"
+#include "CurrentThread.h"
 
-Exception::Exception(std::string msg) : m_message(std::move(msg)), m_stack() {}
+namespace convey
+{
+Exception::Exception(std::string msg) : message_(std::move(msg)), stack_(CurrentThread::stackTrace(/*demangle=*/false)) {}
+}  // namespace convey
