@@ -10,3 +10,6 @@ target_link_libraries(test_exception convey_base)
 
 add_executable(test_mutex test_mutex.cc)
 target_link_libraries(test_mutex convey_base)
+
+add_executable(test_singleton test_singleton.cc)
+target_link_libraries(test_singleton convey_base)
