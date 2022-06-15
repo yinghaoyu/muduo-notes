@@ -7,6 +7,10 @@
 #include <pthread.h>
 #include <stdlib.h>  // atexit
 
+namespace convey
+{
+namespace detail
+{
 template <typename T>
 struct has_no_destroy
 {
@@ -21,6 +25,7 @@ struct has_no_destroy
 
   const static bool value = sizeof(test<T>(0)) == 1;
 };
+}  // namespace detail
 
 template <typename T>
 class Singleton : public noncopyable
@@ -67,5 +72,5 @@ pthread_once_t Singleton<T>::ponce_ = PTHREAD_ONCE_INIT;
 
 template <typename T>
 T *Singleton<T>::value_ = NULL;
-
+}  // namespace convey
 #endif
