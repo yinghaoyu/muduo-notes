@@ -26,5 +26,24 @@ set(CXX_FLAGS
   -march=native # 编译代码的cpu和运行bin的cpu不匹配，使bin不能运行
   )
 
+# 如果机器是32位的，就以32位编译
+if(CMAKE_BUILD_BITS EQUAL 32)
+  list(APPEND CXX_FLAGS "-m32") # 表示往CXX_FLAGS添加-m32
+endif()
+
+# string(REPLACE <match_string> <replace_string> <output_variable> <input>)
+string(REPLACE ";" " " CMAKE_CXX_FLAGS "${CXX_FLAGS}") # 排错，把;替换成空格
+
+set(CMAKE_CXX_FLAGS_DEBUG "-O0") # debug时不优化
+set(CMAKE_CXX_FLAGS_RELEASE "-O2 -DNDEBUG") # release时开启O2优化
+set(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin) # 指定bin路径
+set(LIBRARY_OUTPUT_PATH ${PROJECT_BINARY_DIR}/lib) # 指定lib路径
+
+find_package(Boost REQUIRED) # 依赖boost库
+include_directories(${Boost_INCLUDE_DIRS}) # 引入boost库头文件
+
 add_subdirectory(convey)
 add_subdirectory(tests)
+
+string(TOUPPER ${CMAKE_BUILD_TYPE} BUILD_TYPE) # 将CMAKE_BUILD_TYPE变量字符转为大写
+message(STATUS "CXX_FLAGS = " ${CMAKE_CXX_FLAGS} " " ${CMAKE_CXX_FLAGS_${BUILD_TYPE}})
