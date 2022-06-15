@@ -1,0 +1,67 @@
+[
+{
+  "directory": "/mnt/g/convey/release-cpp11/convey",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/convey_base.dir/Condition.cc.o -c /mnt/g/convey/convey/Condition.cc",
+  "file": "/mnt/g/convey/convey/Condition.cc"
+},
+{
+  "directory": "/mnt/g/convey/release-cpp11/convey",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/convey_base.dir/CountDownLatch.cc.o -c /mnt/g/convey/convey/CountDownLatch.cc",
+  "file": "/mnt/g/convey/convey/CountDownLatch.cc"
+},
+{
+  "directory": "/mnt/g/convey/release-cpp11/convey",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/convey_base.dir/CurrentThread.cc.o -c /mnt/g/convey/convey/CurrentThread.cc",
+  "file": "/mnt/g/convey/convey/CurrentThread.cc"
+},
+{
+  "directory": "/mnt/g/convey/release-cpp11/convey",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/convey_base.dir/Date.cc.o -c /mnt/g/convey/convey/Date.cc",
+  "file": "/mnt/g/convey/convey/Date.cc"
+},
+{
+  "directory": "/mnt/g/convey/release-cpp11/convey",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/convey_base.dir/Exception.cc.o -c /mnt/g/convey/convey/Exception.cc",
+  "file": "/mnt/g/convey/convey/Exception.cc"
+},
+{
+  "directory": "/mnt/g/convey/release-cpp11/convey",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/convey_base.dir/Logging.cc.o -c /mnt/g/convey/convey/Logging.cc",
+  "file": "/mnt/g/convey/convey/Logging.cc"
+},
+{
+  "directory": "/mnt/g/convey/release-cpp11/convey",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/convey_base.dir/LogStream.cc.o -c /mnt/g/convey/convey/LogStream.cc",
+  "file": "/mnt/g/convey/convey/LogStream.cc"
+},
+{
+  "directory": "/mnt/g/convey/release-cpp11/convey",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/convey_base.dir/Timestamp.cc.o -c /mnt/g/convey/convey/Timestamp.cc",
+  "file": "/mnt/g/convey/convey/Timestamp.cc"
+},
+{
+  "directory": "/mnt/g/convey/release-cpp11/convey",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/convey_base.dir/Thread.cc.o -c /mnt/g/convey/convey/Thread.cc",
+  "file": "/mnt/g/convey/convey/Thread.cc"
+},
+{
+  "directory": "/mnt/g/convey/release-cpp11/convey",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/convey_base.dir/ThreadPool.cc.o -c /mnt/g/convey/convey/ThreadPool.cc",
+  "file": "/mnt/g/convey/convey/ThreadPool.cc"
+},
+{
+  "directory": "/mnt/g/convey/release-cpp11/convey",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/convey_base.dir/TimeZone.cc.o -c /mnt/g/convey/convey/TimeZone.cc",
+  "file": "/mnt/g/convey/convey/TimeZone.cc"
+},
+{
+  "directory": "/mnt/g/convey/release-cpp11/tests",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/test_atomic.dir/test_atomic.cc.o -c /mnt/g/convey/tests/test_atomic.cc",
+  "file": "/mnt/g/convey/tests/test_atomic.cc"
+},
+{
+  "directory": "/mnt/g/convey/release-cpp11/tests",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/test_thread.dir/test_thread.cc.o -c /mnt/g/convey/tests/test_thread.cc",
+  "file": "/mnt/g/convey/tests/test_thread.cc"
+}
+]

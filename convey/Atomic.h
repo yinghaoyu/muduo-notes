@@ -18,23 +18,12 @@ class AtomicInt : public noncopyable
   AtomicInt(const AtomicInt &other) : value_(other.get()) {}
   AtomicInt &operator=(const AtomicInt &other) {}
 
-  T get()
-  {
-    // in gcc >= 4.7: __atomic_load_n(&value_, __ATOMIC_SEQ_CST)
-    return __sync_val_compare_and_swap(&value_, 0, 0);
-  }
+  // gcc >= 4.7
+  T get() { return __atomic_load_n(&value_, __ATOMIC_SEQ_CST); }
 
-  T getAndSet(T x)
-  {
-    // in gcc >= 4.7: __atomic_exchange_n(&value_, newValue, __ATOMIC_SEQ_CST)
-    return __sync_lock_test_and_set(&value_, x);
-  }
+  T getAndSet(T x) { return __atomic_exchange_n(&value_, x, __ATOMIC_SEQ_CST); }
 
-  T getAndAdd(T x)
-  {
-    // in gcc >= 4.7: __atomic_fetch_add(&value_, x, __ATOMIC_SEQ_CST)
-    return __sync_val_fetch_and_add(&value_, x);
-  }
+  T getAndAdd(T x) { return __atomic_fetch_add(&value_, x, __ATOMIC_SEQ_CST); }
   T addAndGet(T x) { return getAndAdd(x) + x; }
   T incrementAndGet() { return addAndGet(1); }
   T decrementAndGet() { return addAndGet(-1); }

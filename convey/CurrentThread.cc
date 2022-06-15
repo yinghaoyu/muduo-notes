@@ -15,9 +15,9 @@ __thread const char *t_threadName = "unknow";
 // 对pid_t进行静态类型检查
 static_assert(std::is_same<int, pid_t>::value, "pid_t should be int");
 
-std::string stackTrace(bool demangle)  // demangle意为拆解
+string stackTrace(bool demangle)  // demangle意为拆解
 {
-  std::string stack;
+  string stack;
   const int max_frames = 200;
   void *frame[max_frames];
   int nptrs = ::backtrace(frame, max_frames);          // 获取最大200层栈帧

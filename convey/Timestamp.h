@@ -1,6 +1,7 @@
 #ifndef CONVEY_TIMESTAMP_H
 #define CONVEY_TIMESTAMP_H
 
+#include "Types.h"
 #include "copyable.h"
 
 #include <boost/operators.hpp>
@@ -16,8 +17,8 @@ class Timestamp : public copyable, public boost::equality_comparable<Timestamp>,
 
   void swap(Timestamp &other) { std::swap(microSecondsSinceEpoch_, other.microSecondsSinceEpoch_); }
 
-  std::string toString() const;
-  std::string toFormattedString(bool showMicroseconds = true) const;
+  string toString() const;
+  string toFormattedString(bool showMicroseconds = true) const;
 
   bool valid() const { return microSecondsSinceEpoch_ > 0; }
 

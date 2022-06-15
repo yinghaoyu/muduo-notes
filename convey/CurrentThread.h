@@ -1,7 +1,7 @@
 #ifndef CONVEY_CUEERNTTHREAD_H
 #define CONVEY_CUEERNTTHREAD_H
 
-#include <string>
+#include "Types.h"
 
 namespace convey
 {
@@ -47,7 +47,7 @@ bool isMainThread();
 
 void sleepUsec(int64_t usec);
 
-std::string stackTrace(bool demangle);
+string stackTrace(bool demangle);
 
 }  // namespace CurrentThread
 }  // namespace convey

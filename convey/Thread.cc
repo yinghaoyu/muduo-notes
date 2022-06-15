@@ -41,11 +41,11 @@ struct ThreadData
 {
   typedef convey::Thread::ThreadFunc ThreadFunc;
   ThreadFunc func_;
-  std::string name_;
+  string name_;
   pid_t *tid_;
   CountDownLatch *latch_;
 
-  ThreadData(ThreadFunc func, const std::string &name, pid_t *tid, CountDownLatch *latch) : func_(std::move(func)), name_(name), tid_(tid), latch_(latch) {}
+  ThreadData(ThreadFunc func, const string &name, pid_t *tid, CountDownLatch *latch) : func_(std::move(func)), name_(name), tid_(tid), latch_(latch) {}
 
   void runInThread()
   {
@@ -85,13 +85,14 @@ struct ThreadData
   }
 };
 
-void *starteThread(void *obj)
+void *startThread(void *obj)
 {
   ThreadData *data = static_cast<ThreadData *>(obj);
   data->runInThread();
   delete data;
   return NULL;
 }
+
 }  // namespace detail
 
 void CurrentThread::cachedTid()
@@ -120,7 +121,7 @@ void CurrentThread::sleepUsec(int64_t usec)
 // 初始化局部静态变量
 AtomicInt32 Thread::numCreated_;
 
-Thread::Thread(ThreadFunc func, const std::string name) : started_(false), joined_(false), pthread_(0), tid_(0), func_(std::move(func)), name_(name), latch_(1)
+Thread::Thread(ThreadFunc func, const string &name) : started_(false), joined_(false), pthread_(0), tid_(0), func_(std::move(func)), name_(name), latch_(1)
 {
   setDefaultName();
 }
@@ -130,6 +131,8 @@ Thread::~Thread()
   if (started_ && !joined_)
   {
     // 如果线程没有正常joined就detach
+    // 假如Thread类先析构，通过detach使得主线程与子线程分离
+    // detach不会终结子线程，子线程结束后，资源自动回收
     pthread_detach(pthread_);
   }
 }
@@ -150,7 +153,7 @@ void Thread::start()
   assert(!started_);
   started_ = true;
   detail::ThreadData *data = new detail::ThreadData(func_, name_, &tid_, &latch_);
-  if (pthread_create(&pthread_, NULL, Thread::startThread, this))
+  if (pthread_create(&pthread_, NULL, &detail::startThread, data))
   {
     started_ = false;
     delete data;

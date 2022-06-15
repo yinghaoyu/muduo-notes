@@ -1,0 +1,9 @@
+/mnt/g/convey/release-cpp11/CMakeFiles/rebuild_cache.dir
+/mnt/g/convey/release-cpp11/CMakeFiles/edit_cache.dir
+/mnt/g/convey/release-cpp11/convey/CMakeFiles/rebuild_cache.dir
+/mnt/g/convey/release-cpp11/convey/CMakeFiles/edit_cache.dir
+/mnt/g/convey/release-cpp11/convey/CMakeFiles/convey_base.dir
+/mnt/g/convey/release-cpp11/tests/CMakeFiles/rebuild_cache.dir
+/mnt/g/convey/release-cpp11/tests/CMakeFiles/test_atomic.dir
+/mnt/g/convey/release-cpp11/tests/CMakeFiles/edit_cache.dir
+/mnt/g/convey/release-cpp11/tests/CMakeFiles/test_thread.dir

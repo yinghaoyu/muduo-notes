@@ -1,0 +1,1 @@
+/usr/bin/c++  -O3 -DNDEBUG  -rdynamic CMakeFiles/test_atomic.dir/test_atomic.cc.o  -o test_atomic 
