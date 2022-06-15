@@ -25,7 +25,8 @@ class FixedBuffer : noncopyable
 
   void append(const char * /*restrict*/ buf, size_t len)
   {
-    if (avail() > len)
+    // 这里不加implicit_cast，会被-Wold-style-cast捕捉
+    if (implicit_cast<size_t>(avail()) > len)
     {
       memcpy(cur_, buf, len);
       cur_ += len;
