@@ -45,7 +45,7 @@ class Singleton : public noncopyable
   static void init()
   {
     value_ = new T();
-    if (!has_no_destroy<T>::value)
+    if (!detail::has_no_destroy<T>::value)
     {
       ::atexit(destory);
     }
