@@ -13,3 +13,6 @@ target_link_libraries(test_mutex convey_base)
 
 add_executable(test_singleton test_singleton.cc)
 target_link_libraries(test_singleton convey_base)
+
+add_executable(test_timestamp test_timestamp.cc)
+target_link_libraries(test_timestamp convey_base)
