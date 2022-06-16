@@ -55,6 +55,9 @@ class ThreadLocalSingleton : public noncopyable
     pthread_key_t pkey_;
   };
 
+  // 和Singleton的主要区别:
+  // Singleton的指针是静态全局指针
+  // 这里的指针是__thread线程独享的静态指针
   static __thread T *t_value_;
   static Deleter deleter_;
 };
