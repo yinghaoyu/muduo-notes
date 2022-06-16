@@ -23,6 +23,7 @@ class FixedBuffer : noncopyable
 
   ~FixedBuffer() { setCookie(cookieEnd); }
 
+  // 关于restrict的解释https://zhuanlan.zhihu.com/p/349726808
   void append(const char * /*restrict*/ buf, size_t len)
   {
     // 这里不加implicit_cast，会被-Wold-style-cast捕捉
