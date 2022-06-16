@@ -28,3 +28,6 @@ target_link_libraries(test_logstream convey_base)
 
 add_executable(test_processinfo test_processinfo.cc)
 target_link_libraries(test_processinfo convey_base)
+
+add_executable(test_singletonthreadlocal test_singletonthreadlocal.cc)
+target_link_libraries(test_singletonthreadlocal convey_base)
