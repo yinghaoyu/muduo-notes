@@ -16,3 +16,12 @@ target_link_libraries(test_singleton convey_base)
 
 add_executable(test_timestamp test_timestamp.cc)
 target_link_libraries(test_timestamp convey_base)
+
+add_executable(test_blockingqueue1 test_blockingqueue1.cc)
+target_link_libraries(test_blockingqueue1 convey_base)
+
+add_executable(test_logging test_logging.cc)
+target_link_libraries(test_logging convey_base)
+
+add_executable(test_logstream test_logstream.cc)
+target_link_libraries(test_logstream convey_base)
