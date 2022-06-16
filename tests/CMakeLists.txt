@@ -25,3 +25,6 @@ target_link_libraries(test_logging convey_base)
 
 add_executable(test_logstream test_logstream.cc)
 target_link_libraries(test_logstream convey_base)
+
+add_executable(test_processinfo test_processinfo.cc)
+target_link_libraries(test_processinfo convey_base)
