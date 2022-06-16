@@ -31,3 +31,6 @@ target_link_libraries(test_processinfo convey_base)
 
 add_executable(test_singletonthreadlocal test_singletonthreadlocal.cc)
 target_link_libraries(test_singletonthreadlocal convey_base)
+
+add_executable(test_timezone test_timezone.cc)
+target_link_libraries(test_timezone convey_base)
