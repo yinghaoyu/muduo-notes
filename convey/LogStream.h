@@ -26,7 +26,7 @@ class FixedBuffer : noncopyable
   // 关于restrict的解释https://zhuanlan.zhihu.com/p/349726808
   void append(const char * /*restrict*/ buf, size_t len)
   {
-    // 这里不加implicit_cast，会被-Wold-style-cast捕捉
+    // 这里如果不加implicit_cast，由于设置了-Wextra，会被-Werror=sign-compare捕捉
     if (implicit_cast<size_t>(avail()) > len)
     {
       memcpy(cur_, buf, len);
