@@ -1,5 +1,5 @@
-#include "../convey/TimeZone.h"
-#include "../convey/Types.h"
+#include "../convey/base/TimeZone.h"
+#include "../convey/base/Types.h"
 
 #include <assert.h>
 #include <stdio.h>

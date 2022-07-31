@@ -41,9 +41,13 @@ set(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin) # 指定bin路径
 set(LIBRARY_OUTPUT_PATH ${PROJECT_BINARY_DIR}/lib) # 指定lib路径
 
 find_package(Boost REQUIRED) # 依赖boost库
+#find_library(BOOSTTEST_LIBRARY NAMES boost_unit_test_framework)
+#find_library(BOOSTPO_LIBRARY NAMES boost_program_options)
+#find_library(BOOSTSYSTEM_LIBRARY NAMES boost_system)
 include_directories(${Boost_INCLUDE_DIRS}) # 引入boost库头文件
 
-add_subdirectory(convey)
+add_subdirectory(convey/base)
+add_subdirectory(convey/net)
 add_subdirectory(tests)
 
 string(TOUPPER ${CMAKE_BUILD_TYPE} BUILD_TYPE) # 将CMAKE_BUILD_TYPE变量字符转为大写

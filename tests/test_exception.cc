@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <functional>
 #include <vector>
-#include "../convey/CurrentThread.h"
-#include "../convey/Exception.h"
+#include "../convey/base/CurrentThread.h"
+#include "../convey/base/Exception.h"
 
 class Bar
 {

@@ -1,5 +1,5 @@
-#include "../convey/CurrentThread.h"
-#include "../convey/Thread.h"
+#include "../convey/base/CurrentThread.h"
+#include "../convey/base/Thread.h"
 
 #include <stdio.h>
 #include <unistd.h>

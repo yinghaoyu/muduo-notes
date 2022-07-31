@@ -1,5 +1,5 @@
 #include <assert.h>
-#include "../convey/Atomic.h"
+#include "../convey/base/Atomic.h"
 
 int main()
 {

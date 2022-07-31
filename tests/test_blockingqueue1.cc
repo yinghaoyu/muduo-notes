@@ -1,8 +1,8 @@
-#include "../convey/BlockingQueue.h"
-#include "../convey/CountDownLatch.h"
-#include "../convey/Logging.h"
-#include "../convey/Thread.h"
-#include "../convey/Timestamp.h"
+#include "../convey/base/BlockingQueue.h"
+#include "../convey/base/CountDownLatch.h"
+#include "../convey/base/Logging.h"
+#include "../convey/base/Thread.h"
+#include "../convey/base/Timestamp.h"
 
 #include <stdio.h>
 #include <unistd.h>

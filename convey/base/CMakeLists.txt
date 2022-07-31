@@ -8,6 +8,7 @@ set(base_SRCS
   LogFile.cc
   Logging.cc
   LogStream.cc
+  AsyncLogging.cc
   ProcessInfo.cc
   Timestamp.cc
   Thread.cc

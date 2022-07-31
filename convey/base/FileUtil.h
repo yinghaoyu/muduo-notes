@@ -2,8 +2,8 @@
 #define CONVEY_BASE_FILEUTIL_H
 
 #include <sys/types.h>  // for off_t
-#include "../convey/StringPiece.h"
-#include "../convey/noncopyable.h"
+#include "../../convey/base/StringPiece.h"
+#include "../../convey/base/noncopyable.h"
 
 namespace convey
 {

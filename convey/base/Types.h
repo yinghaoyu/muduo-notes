@@ -57,7 +57,9 @@ inline To down_cast(From *f)           // so we only accept pointers
   // completely.
   if (false)
   {
-    // 通过编译验证From是To的父类，开启了编译优化这一整个if会被完全优化掉
+    // 通过编译验证From是To的父类
+    // 父类指针向基类指针转换
+    // 开启了编译优化这一整个if会被完全优化掉
     implicit_cast<From *, To>(0);
   }
 
@@ -92,7 +94,7 @@ inline To down_cast(From *f)           // so we only accept pointers
 //   Bottom btm;
 //   fun(btm);  // 这里编译会出错 Call to 'fun' is ambiguous
 // }
-// 在菱形继承中，可以把上面改为static_cast<A&>(btm)或者static_cast<A&>(btm)
+// 在菱形继承中，可以把上面改为static_cast<A&>(btm)或者static_cast<B&>(btm)
 // void test()
 // {
 //   Top top;

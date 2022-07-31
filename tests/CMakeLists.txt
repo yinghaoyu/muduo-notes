@@ -26,6 +26,9 @@ target_link_libraries(test_logging convey_base)
 add_executable(test_logstream test_logstream.cc)
 target_link_libraries(test_logstream convey_base)
 
+add_executable(test_asynclogging test_asynclogging.cc)
+target_link_libraries(test_asynclogging convey_base)
+
 add_executable(test_processinfo test_processinfo.cc)
 target_link_libraries(test_processinfo convey_base)
 
@@ -34,3 +37,45 @@ target_link_libraries(test_singletonthreadlocal convey_base)
 
 add_executable(test_timezone test_timezone.cc)
 target_link_libraries(test_timezone convey_base)
+
+add_executable(test_threadpool test_threadpool.cc)
+target_link_libraries(test_threadpool convey_base)
+
+add_executable(test_timerqueue test_timerqueue.cc)
+target_link_libraries(test_timerqueue convey_net)
+
+add_executable(test_channel test_channel.cc)
+target_link_libraries(test_channel convey_net)
+
+add_executable(test_eventloop test_eventloop.cc)
+target_link_libraries(test_eventloop convey_net)
+
+add_executable(test_eventloopthread test_eventloopthread.cc)
+target_link_libraries(test_eventloopthread convey_net)
+
+add_executable(test_eventloopthreadpool test_eventloopthreadpool.cc)
+target_link_libraries(test_eventloopthreadpool convey_net)
+
+add_executable(test_inetaddress test_inetaddress.cc)
+target_link_libraries(test_inetaddress convey_net)
+
+add_executable(test_echoserver test_echoserver.cc)
+target_link_libraries(test_echoserver convey_net)
+
+add_executable(test_echoclient test_echoclient.cc)
+target_link_libraries(test_echoclient convey_net)
+
+add_executable(test_tcpclient_reg1 test_tcpclient_reg1.cc)
+target_link_libraries(test_tcpclient_reg1 convey_net)
+
+add_executable(test_tcpclient_reg2 test_tcpclient_reg2.cc)
+target_link_libraries(test_tcpclient_reg2 convey_net)
+
+add_executable(test_tcpclient_reg3 test_tcpclient_reg3.cc)
+target_link_libraries(test_tcpclient_reg3 convey_net)
+
+add_executable(test_httpserver test_httpserver.cc)
+target_link_libraries(test_httpserver convey_http)
+
+add_executable(test_inspector test_inspector.cc)
+target_link_libraries(test_inspector convey_inspect)

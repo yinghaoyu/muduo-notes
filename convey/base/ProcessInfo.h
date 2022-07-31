@@ -1,11 +1,11 @@
-#ifndef CONVEY_PROCESSINFO_H
-#define CONVEY_PROCESSINFO_H
+#ifndef CONVEY_BASE_PROCESSINFO_H
+#define CONVEY_BASE_PROCESSINFO_H
 
 #include <sys/types.h>
 #include <vector>
-#include "../convey/StringPiece.h"
-#include "../convey/Timestamp.h"
-#include "../convey/Types.h"
+#include "../../convey/base/StringPiece.h"
+#include "../../convey/base/Timestamp.h"
+#include "../../convey/base/Types.h"
 
 namespace convey
 {

@@ -1,5 +1,7 @@
-#include "../convey/copyable.h"
-#include "../convey/noncopyable.h"
+#include "../convey/base/copyable.h"
+#include "../convey/base/noncopyable.h"
+
+using namespace convey;
 
 class A : public copyable
 {

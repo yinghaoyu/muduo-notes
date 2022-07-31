@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "../convey/ProcessInfo.h"
+#include "../convey/base/ProcessInfo.h"
 #define __STDC_FORMAT_MACROS
 #include <inttypes.h>
 

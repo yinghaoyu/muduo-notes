@@ -1,13 +1,8 @@
-// Use of this source code is governed by a BSD-style license
-// that can be found in the License file.
-//
-// Author: Shuo Chen (chenshuo at chenshuo dot com)
+#ifndef CONVEY_BASE_LOGFILE_H
+#define CONVEY_BASE_LOGFILE_H
 
-#ifndef CONVEY_LOGFILE_H
-#define CONVEY_LOGFILE_H
-
-#include "../convey/Mutex.h"
-#include "../convey/Types.h"
+#include "../../convey/base/Mutex.h"
+#include "../../convey/base/Types.h"
 
 #include <memory>
 

@@ -1,6 +1,6 @@
-#include "../convey/ProcessInfo.h"
-#include "../convey/CurrentThread.h"
-#include "../convey/FileUtil.h"
+#include "../../convey/base/ProcessInfo.h"
+#include "../../convey/base/CurrentThread.h"
+#include "../../convey/base/FileUtil.h"
 
 #include <algorithm>
 
