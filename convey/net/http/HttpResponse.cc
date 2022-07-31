@@ -10,10 +10,12 @@ void HttpResponse::appendToBuffer(Buffer *output) const
 {
   char buf[32];
   snprintf(buf, sizeof buf, "HTTP/1.1 %d ", statusCode_);
+  // 添加请求行
   output->append(buf);
   output->append(statusMessage_);
   output->append("\r\n");
 
+  // 添加请求头部
   if (closeConnection_)
   {
     output->append("Connection: close\r\n");
@@ -34,5 +36,6 @@ void HttpResponse::appendToBuffer(Buffer *output) const
   }
 
   output->append("\r\n");
+  // 添加请求体
   output->append(body_);
 }

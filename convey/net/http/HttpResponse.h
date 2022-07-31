@@ -17,10 +17,10 @@ class HttpResponse : public convey::copyable
   enum HttpStatusCode
   {
     kUnknown,
-    k200Ok = 200,
+    k200Ok = 200,  // 客户端请求成功
     k301MovedPermanently = 301,
-    k400BadRequest = 400,
-    k404NotFound = 404,
+    k400BadRequest = 400,  // 客户端请求语法有错
+    k404NotFound = 404,    // 请求资源部存在，eg：输入了错误的URl
   };
 
   explicit HttpResponse(bool close) : statusCode_(kUnknown), closeConnection_(close) {}

@@ -47,19 +47,30 @@ bool HttpContext::processRequestLine(const char *begin, const char *end)
   return succeed;
 }
 
+// HTTP协议格式
+//  ----------------------------------------
+// |请求方法|space|URL|space|协议版本|\r|\n|    --> 请求行
+// |头部字段名|:|          值        |\r|\n|
+//              .   .   .
+//              .   .   .                       --> 请求头部
+//              .   .   .
+// |头部字段名|:|          值        |\r|\n|
+//                                   |\r|\n|
+// |              数据                     |    ---> 请求数据
+
 // return false if any error
 bool HttpContext::parseRequest(Buffer *buf, Timestamp receiveTime)
 {
   bool ok = true;
   bool hasMore = true;
-  while (hasMore)
+  while (hasMore)  // 解析buf的状态机
   {
     if (state_ == kExpectRequestLine)
     {
-      const char *crlf = buf->findCRLF();
+      const char *crlf = buf->findCRLF();  // 找到'\r\n'
       if (crlf)
       {
-        ok = processRequestLine(buf->peek(), crlf);
+        ok = processRequestLine(buf->peek(), crlf);  // 解析请求行
         if (ok)
         {
           request_.setReceiveTime(receiveTime);

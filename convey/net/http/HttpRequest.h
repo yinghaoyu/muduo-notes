@@ -113,10 +113,12 @@ class HttpRequest : public convey::copyable
   {
     string field(start, colon);
     ++colon;
+    // 去除开头的空格
     while (colon < end && isspace(*colon))
     {
       ++colon;
     }
+    // 去除结尾的空格
     string value(colon, end);
     while (!value.empty() && isspace(value[value.size() - 1]))
     {
@@ -149,12 +151,12 @@ class HttpRequest : public convey::copyable
   }
 
  private:
-  Method method_;
-  Version version_;
-  string path_;
-  string query_;
-  Timestamp receiveTime_;
-  std::map<string, string> headers_;
+  Method method_;                     // http方法
+  Version version_;                   // http版本号
+  string path_;                       // 请求路径
+  string query_;                      // 请求
+  Timestamp receiveTime_;             // 请求收到的时间戳
+  std::map<string, string> headers_;  // http头
 };
 
 }  // namespace net

@@ -42,23 +42,30 @@ void HttpServer::onConnection(const TcpConnectionPtr &conn)
 {
   if (conn->connected())
   {
+    // 保存这个连接的上下文
     conn->setContext(HttpContext());
   }
 }
 
 void HttpServer::onMessage(const TcpConnectionPtr &conn, Buffer *buf, Timestamp receiveTime)
 {
+  // 获取这个连接的上下文
   HttpContext *context = boost::any_cast<HttpContext>(conn->getMutableContext());
 
+  // 解析buffer，并保存到context的HttpRequest
   if (!context->parseRequest(buf, receiveTime))
   {
+    // 解析出错
     conn->send("HTTP/1.1 400 Bad Request\r\n\r\n");
     conn->shutdown();
   }
 
   if (context->gotAll())
   {
+    // 解析成功
+    // 根据request发送相应的response
     onRequest(conn, context->request());
+    // 处理本次request，重置connection的上下文
     context->reset();
   }
 }
@@ -66,6 +73,7 @@ void HttpServer::onMessage(const TcpConnectionPtr &conn, Buffer *buf, Timestamp 
 void HttpServer::onRequest(const TcpConnectionPtr &conn, const HttpRequest &req)
 {
   const string &connection = req.getHeader("Connection");
+  // http 1.0 如果是长连接，必须指定Keep-Alive选项
   bool close = connection == "close" || (req.getVersion() == HttpRequest::kHttp10 && connection != "Keep-Alive");
   HttpResponse response(close);
   httpCallback_(req, &response);
