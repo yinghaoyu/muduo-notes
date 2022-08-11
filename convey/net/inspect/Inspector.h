@@ -48,4 +48,4 @@ class Inspector : noncopyable
 }  // namespace net
 }  // namespace convey
 
-#endif  // convey_NET_INSPECT_INSPECTOR_H
+#endif
