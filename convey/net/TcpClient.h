@@ -1,8 +1,8 @@
 #ifndef CONVEY_NET_TCPCLIENT_H
 #define CONVEY_NET_TCPCLIENT_H
 
-#include "../base/Mutex.h"
-#include "../net/TcpConnection.h"
+#include "convey/base/Mutex.h"
+#include "convey/net/TcpConnection.h"
 
 namespace convey
 {

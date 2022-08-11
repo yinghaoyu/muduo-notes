@@ -1,4 +1,4 @@
-#include "CountDownLatch.h"
+#include "convey/base/CountDownLatch.h"
 
 using namespace convey;
 

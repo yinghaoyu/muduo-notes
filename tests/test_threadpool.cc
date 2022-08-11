@@ -1,7 +1,7 @@
-#include "../convey/base/CountDownLatch.h"
-#include "../convey/base/CurrentThread.h"
-#include "../convey/base/Logging.h"
-#include "../convey/base/ThreadPool.h"
+#include "convey/base/CountDownLatch.h"
+#include "convey/base/CurrentThread.h"
+#include "convey/base/Logging.h"
+#include "convey/base/ThreadPool.h"
 
 #include <stdio.h>
 #include <unistd.h>  // usleep

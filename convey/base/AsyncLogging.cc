@@ -1,6 +1,6 @@
-#include "../base/AsyncLogging.h"
-#include "../base/LogFile.h"
-#include "../base/Timestamp.h"
+#include "convey/base/AsyncLogging.h"
+#include "convey/base/LogFile.h"
+#include "convey/base/Timestamp.h"
 
 #include <stdio.h>
 

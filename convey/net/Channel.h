@@ -1,8 +1,8 @@
 #ifndef CHANNEL_NET_CHANNEL_H
 #define CHANNEL_NET_CHANNEL_H
 
-#include "../base/Timestamp.h"
-#include "../base/noncopyable.h"
+#include "convey/base/Timestamp.h"
+#include "convey/base/noncopyable.h"
 
 #include <functional>
 #include <memory>

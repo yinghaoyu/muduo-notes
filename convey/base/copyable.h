@@ -1,5 +1,5 @@
-#ifndef CONVEY_COPYABLE_H
-#define CONVEY_COPYABLE_H
+#ifndef CONVEY_BASE_COPYABLE_H
+#define CONVEY_BASE_COPYABLE_H
 
 namespace convey
 {

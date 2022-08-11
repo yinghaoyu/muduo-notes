@@ -1,8 +1,8 @@
-#ifndef CONVEY_THREADLOCAL_H
-#define CONVEY_THREADLOCAL_H
+#ifndef CONVEY_BASE_THREADLOCAL_H
+#define CONVEY_BASE_THREADLOCAL_H
 
-#include "Mutex.h"
-#include "noncopyable.h"
+#include "convey/base/Mutex.h"
+#include "convey/base/noncopyable.h"
 
 namespace convey
 {

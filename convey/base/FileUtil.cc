@@ -1,5 +1,5 @@
-#include "../../convey/base/FileUtil.h"
-#include "../../convey/base/Logging.h"
+#include "convey/base/FileUtil.h"
+#include "convey/base/Logging.h"
 
 #include <assert.h>
 #include <errno.h>

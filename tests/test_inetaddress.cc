@@ -1,6 +1,6 @@
-#include "../convey/net/InetAddress.h"
+#include "convey/net/InetAddress.h"
 
-#include "../convey/base/Logging.h"
+#include "convey/base/Logging.h"
 
 #include <assert.h>
 

@@ -1,8 +1,8 @@
-#ifndef CONVEY_BLOCKINGQUEUE_H
-#define CONVEY_BLOCKINGQUEUE_H
+#ifndef CONVEY_BASE_BLOCKINGQUEUE_H
+#define CONVEY_BASE_BLOCKINGQUEUE_H
 
-#include "Condition.h"
-#include "Mutex.h"
+#include "convey/base/Condition.h"
+#include "convey/base/Mutex.h"
 
 #include <assert.h>
 #include <deque>

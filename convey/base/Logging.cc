@@ -1,8 +1,8 @@
-#include "Logging.h"
+#include "convey/base/Logging.h"
 
-#include "CurrentThread.h"
-#include "TimeZone.h"
-#include "Timestamp.h"
+#include "convey/base/CurrentThread.h"
+#include "convey/base/TimeZone.h"
+#include "convey/base/Timestamp.h"
 
 #include <errno.h>
 #include <stdio.h>

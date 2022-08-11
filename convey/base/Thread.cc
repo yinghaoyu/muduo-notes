@@ -1,7 +1,7 @@
-#include "Thread.h"
-#include "CurrentThread.h"
-#include "Exception.h"
-#include "Timestamp.h"
+#include "convey/base/Thread.h"
+#include "convey/base/CurrentThread.h"
+#include "convey/base/Exception.h"
+#include "convey/base/Timestamp.h"
 
 #include <sys/prctl.h>
 #include <sys/syscall.h>

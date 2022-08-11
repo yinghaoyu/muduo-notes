@@ -1,8 +1,8 @@
-#ifndef CONVEY_DATE_H
-#define CONVEY_DATE_H
+#ifndef CONVEY_BASE_DATE_H
+#define CONVEY_BASE_DATE_H
 
-#include "Types.h"
-#include "copyable.h"
+#include "convey/base/Types.h"
+#include "convey/base/copyable.h"
 
 struct tm;
 

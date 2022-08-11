@@ -1,9 +1,9 @@
 #ifndef CONVEY_LOGSTREAM_H
 #define CONVEY_LOGSTREAM_H
 
-#include "StringPiece.h"
-#include "Types.h"
-#include "noncopyable.h"
+#include "convey/base/StringPiece.h"
+#include "convey/base/Types.h"
+#include "convey/base/noncopyable.h"
 
 #include <assert.h>
 #include <string.h>  // memcpy

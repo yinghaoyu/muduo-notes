@@ -1,9 +1,9 @@
 #ifndef CONVEY_NET_HTTP_HTTPREQUEST_H
 #define CONVEY_NET_HTTP_HTTPREQUEST_H
 
-#include "../../base/Timestamp.h"
-#include "../../base/Types.h"
-#include "../../base/copyable.h"
+#include "convey/base/Timestamp.h"
+#include "convey/base/Types.h"
+#include "convey/base/copyable.h"
 
 #include <assert.h>
 #include <stdio.h>

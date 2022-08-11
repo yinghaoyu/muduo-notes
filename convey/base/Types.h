@@ -1,5 +1,5 @@
-#ifndef CONVEY_TYPES_H
-#define CONVEY_TYPES_H
+#ifndef CONVEY_BASE_TYPES_H
+#define CONVEY_BASE_TYPES_H
 
 #include <stdint.h>
 #include <string.h>  // memset

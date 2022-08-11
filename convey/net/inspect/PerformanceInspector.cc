@@ -1,7 +1,7 @@
-#include "../inspect/PerformanceInspector.h"
-#include "../../base/FileUtil.h"
-#include "../../base/LogStream.h"
-#include "../../base/ProcessInfo.h"
+#include "convey/net/inspect/PerformanceInspector.h"
+#include "convey/base/FileUtil.h"
+#include "convey/base/LogStream.h"
+#include "convey/base/ProcessInfo.h"
 
 #include <unistd.h>
 

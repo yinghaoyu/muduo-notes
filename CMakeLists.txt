@@ -45,6 +45,7 @@ find_package(Boost REQUIRED) # 依赖boost库
 #find_library(BOOSTPO_LIBRARY NAMES boost_program_options)
 #find_library(BOOSTSYSTEM_LIBRARY NAMES boost_system)
 include_directories(${Boost_INCLUDE_DIRS}) # 引入boost库头文件
+include_directories(${PROJECT_SOURCE_DIR})
 
 add_subdirectory(convey/base)
 add_subdirectory(convey/net)

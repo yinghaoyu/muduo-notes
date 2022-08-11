@@ -7,11 +7,11 @@
 
 #include <boost/any.hpp>
 
-#include "../base/CurrentThread.h"
-#include "../base/Mutex.h"
-#include "../base/Timestamp.h"
-#include "../net/Callbacks.h"
-#include "../net/TimerId.h"
+#include "convey/base/CurrentThread.h"
+#include "convey/base/Mutex.h"
+#include "convey/base/Timestamp.h"
+#include "convey/net/Callbacks.h"
+#include "convey/net/TimerId.h"
 
 namespace convey
 {

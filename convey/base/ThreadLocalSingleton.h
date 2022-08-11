@@ -1,7 +1,7 @@
-#ifndef CONVEY_THREADLOCALSINGLETON_H
-#define CONVEY_THREADLOCALSINGLETON_H
+#ifndef CONVEY_BASE_THREADLOCALSINGLETON_H
+#define CONVEY_BASE_THREADLOCALSINGLETON_H
 
-#include "noncopyable.h"
+#include "convey/base/noncopyable.h"
 
 #include <assert.h>
 #include <pthread.h>

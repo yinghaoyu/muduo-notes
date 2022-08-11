@@ -1,9 +1,9 @@
-#include "../net/Acceptor.h"
+#include "convey/net/Acceptor.h"
 
-#include "../base/Logging.h"
-#include "../net/EventLoop.h"
-#include "../net/InetAddress.h"
-#include "../net/SocketsOps.h"
+#include "convey/base/Logging.h"
+#include "convey/net/EventLoop.h"
+#include "convey/net/InetAddress.h"
+#include "convey/net/SocketsOps.h"
 
 #include <errno.h>
 #include <fcntl.h>

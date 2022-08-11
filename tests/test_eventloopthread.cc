@@ -1,7 +1,7 @@
-#include "../convey/base/CountDownLatch.h"
-#include "../convey/base/Thread.h"
-#include "../convey/net/EventLoop.h"
-#include "../convey/net/EventLoopThread.h"
+#include "convey/base/CountDownLatch.h"
+#include "convey/base/Thread.h"
+#include "convey/net/EventLoop.h"
+#include "convey/net/EventLoopThread.h"
 
 #include <stdio.h>
 #include <unistd.h>

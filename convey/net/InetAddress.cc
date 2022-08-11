@@ -1,8 +1,8 @@
-#include "../net/InetAddress.h"
+#include "convey/net/InetAddress.h"
 
-#include "../base/Logging.h"
-#include "../net/Endian.h"
-#include "../net/SocketsOps.h"
+#include "convey/base/Logging.h"
+#include "convey/net/Endian.h"
+#include "convey/net/SocketsOps.h"
 
 #include <netdb.h>
 #include <netinet/in.h>

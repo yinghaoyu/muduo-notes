@@ -1,9 +1,9 @@
 #ifndef CONVEY_NET_EVENTLOOPTHREAD_H
 #define CONVEY_NET_EVENTLOOPTHREAD_H
 
-#include "../base/Condition.h"
-#include "../base/Mutex.h"
-#include "../base/Thread.h"
+#include "convey/base/Condition.h"
+#include "convey/base/Mutex.h"
+#include "convey/base/Thread.h"
 
 namespace convey
 {

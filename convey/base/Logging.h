@@ -1,8 +1,8 @@
-#ifndef CONVEY_LOGGING_H
-#define CONVEY_LOGGING_H
+#ifndef CONVEY_BASE_LOGGING_H
+#define CONVEY_BASE_LOGGING_H
 
-#include "LogStream.h"
-#include "Timestamp.h"
+#include "convey/base/LogStream.h"
+#include "convey/base/Timestamp.h"
 
 namespace convey
 {

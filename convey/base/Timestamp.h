@@ -1,8 +1,8 @@
-#ifndef CONVEY_TIMESTAMP_H
-#define CONVEY_TIMESTAMP_H
+#ifndef CONVEY_BASE_TIMESTAMP_H
+#define CONVEY_BASE_TIMESTAMP_H
 
-#include "Types.h"
-#include "copyable.h"
+#include "convey/base/Types.h"
+#include "convey/base/copyable.h"
 
 #include <boost/operators.hpp>
 

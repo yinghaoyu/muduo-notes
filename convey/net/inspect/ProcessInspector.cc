@@ -1,10 +1,10 @@
-#include "../inspect/ProcessInspector.h"
+#include "convey/net/inspect/ProcessInspector.h"
 #include <limits.h>
 #include <stdarg.h>
 #include <stdio.h>
 #include <unistd.h>
-#include "../../base/FileUtil.h"
-#include "../../base/ProcessInfo.h"
+#include "convey/base/FileUtil.h"
+#include "convey/base/ProcessInfo.h"
 
 using namespace convey;
 using namespace convey::net;

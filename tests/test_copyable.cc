@@ -1,5 +1,5 @@
-#include "../convey/base/copyable.h"
-#include "../convey/base/noncopyable.h"
+#include "convey/base/copyable.h"
+#include "convey/base/noncopyable.h"
 
 using namespace convey;
 

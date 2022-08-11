@@ -1,8 +1,8 @@
 #ifndef CONVEY_NET_INETADDRESS_H
 #define CONVEY_NET_INETADDRESS_H
 
-#include "../base/StringPiece.h"
-#include "../base/copyable.h"
+#include "convey/base/StringPiece.h"
+#include "convey/base/copyable.h"
 
 #include <netinet/in.h>
 

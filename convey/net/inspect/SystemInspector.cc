@@ -1,5 +1,5 @@
-#include "../inspect/SystemInspector.h"
-#include "../../base/FileUtil.h"
+#include "convey/net/inspect/SystemInspector.h"
+#include "convey/base/FileUtil.h"
 
 #include <sys/utsname.h>
 

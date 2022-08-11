@@ -1,9 +1,9 @@
 #ifndef CONVEY_NET_TCPSERVER_H
 #define CONVEY_NET_TCPSERVER_H
 
-#include "../base/Atomic.h"
-#include "../base/Types.h"
-#include "../net/TcpConnection.h"
+#include "convey/base/Atomic.h"
+#include "convey/base/Types.h"
+#include "convey/net/TcpConnection.h"
 
 #include <map>
 

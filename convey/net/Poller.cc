@@ -1,6 +1,6 @@
-#include "../net/Poller.h"
+#include "convey/net/Poller.h"
 
-#include "../net/Channel.h"
+#include "convey/net/Channel.h"
 
 using namespace convey;
 using namespace convey::net;

@@ -1,12 +1,12 @@
 #ifndef CONVEY_BASE_ASYNCLOGGING_H
 #define CONVEY_BASE_ASYNCLOGGING_H
 
-#include "../base/BlockingQueue.h"
-#include "../base/BoundedBlockingQueue.h"
-#include "../base/CountDownLatch.h"
-#include "../base/LogStream.h"
-#include "../base/Mutex.h"
-#include "../base/Thread.h"
+#include "convey/base/BlockingQueue.h"
+#include "convey/base/BoundedBlockingQueue.h"
+#include "convey/base/CountDownLatch.h"
+#include "convey/base/LogStream.h"
+#include "convey/base/Mutex.h"
+#include "convey/base/Thread.h"
 
 #include <atomic>
 #include <vector>

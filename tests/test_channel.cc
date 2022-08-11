@@ -1,6 +1,6 @@
-#include "../convey/base/Logging.h"
-#include "../convey/net/Channel.h"
-#include "../convey/net/EventLoop.h"
+#include "convey/base/Logging.h"
+#include "convey/net/Channel.h"
+#include "convey/net/EventLoop.h"
 
 #include <functional>
 #include <map>

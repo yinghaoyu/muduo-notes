@@ -1,8 +1,8 @@
-#include "../../net/poller/PollPoller.h"
+#include "convey/net/poller/PollPoller.h"
 
-#include "../../base/Logging.h"
-#include "../../base/Types.h"
-#include "../../net/Channel.h"
+#include "convey/base/Logging.h"
+#include "convey/base/Types.h"
+#include "convey/net/Channel.h"
 
 #include <assert.h>
 #include <errno.h>

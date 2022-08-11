@@ -1,7 +1,7 @@
 #ifndef CONVEY_NET_CALLBACKS_H
 #define CONVEY_NET_CALLBACKS_H
 
-#include "../base/Timestamp.h"
+#include "convey/base/Timestamp.h"
 
 #include <functional>
 #include <memory>

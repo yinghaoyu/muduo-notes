@@ -1,7 +1,7 @@
-#ifndef CONVEY_CONDITION_H
-#define CONVEY_CONDITION_H
+#ifndef CONVEY_BASE_CONDITION_H
+#define CONVEY_BASE_CONDITION_H
 
-#include "Mutex.h"
+#include "convey/base/Mutex.h"
 
 namespace convey
 {

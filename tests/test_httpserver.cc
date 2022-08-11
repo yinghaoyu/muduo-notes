@@ -1,8 +1,8 @@
-#include "../convey/base/Logging.h"
-#include "../convey/net/EventLoop.h"
-#include "../convey/net/http/HttpRequest.h"
-#include "../convey/net/http/HttpResponse.h"
-#include "../convey/net/http/HttpServer.h"
+#include "convey/base/Logging.h"
+#include "convey/net/EventLoop.h"
+#include "convey/net/http/HttpRequest.h"
+#include "convey/net/http/HttpResponse.h"
+#include "convey/net/http/HttpServer.h"
 
 #include <iostream>
 #include <map>

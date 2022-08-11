@@ -3,9 +3,9 @@
 
 #include <sys/types.h>
 #include <vector>
-#include "../../convey/base/StringPiece.h"
-#include "../../convey/base/Timestamp.h"
-#include "../../convey/base/Types.h"
+#include "convey/base/StringPiece.h"
+#include "convey/base/Timestamp.h"
+#include "convey/base/Types.h"
 
 namespace convey
 {

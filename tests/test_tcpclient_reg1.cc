@@ -1,8 +1,8 @@
 // TcpClient::stop() called in the same iteration of IO event
 
-#include "../convey/base/Logging.h"
-#include "../convey/net/EventLoop.h"
-#include "../convey/net/TcpClient.h"
+#include "convey/base/Logging.h"
+#include "convey/net/EventLoop.h"
+#include "convey/net/TcpClient.h"
 
 using namespace convey;
 using namespace convey::net;

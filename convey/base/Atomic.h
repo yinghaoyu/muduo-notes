@@ -1,7 +1,7 @@
 #ifndef CONVEY_ATOMIC_H
 #define CONVEY_ATOMIC_H
 
-#include "noncopyable.h"
+#include "convey/base/noncopyable.h"
 
 #include <stdint.h>
 

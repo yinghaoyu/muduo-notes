@@ -1,11 +1,11 @@
-#include "../net/TcpConnection.h"
+#include "convey/net/TcpConnection.h"
 
-#include "../base/Logging.h"
-#include "../base/WeakCallback.h"
-#include "../net/Channel.h"
-#include "../net/EventLoop.h"
-#include "../net/Socket.h"
-#include "../net/SocketsOps.h"
+#include "convey/base/Logging.h"
+#include "convey/base/WeakCallback.h"
+#include "convey/net/Channel.h"
+#include "convey/net/EventLoop.h"
+#include "convey/net/Socket.h"
+#include "convey/net/SocketsOps.h"
 
 #include <errno.h>
 

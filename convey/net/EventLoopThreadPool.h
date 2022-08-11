@@ -1,8 +1,8 @@
 #ifndef CONVEY_NET_EVENTLOOPTHREADPOOL_H
 #define CONVEY_NET_EVENTLOOPTHREADPOOL_H
 
-#include "../base/Types.h"
-#include "../base/noncopyable.h"
+#include "convey/base/Types.h"
+#include "convey/base/noncopyable.h"
 
 #include <functional>
 #include <memory>

@@ -1,9 +1,9 @@
-#ifndef CONVEY_THREADPOOL_H
-#define CONVEY_THREADPOOL_H
+#ifndef CONVEY_BASE_THREADPOOL_H
+#define CONVEY_BASE_THREADPOOL_H
 
-#include "Condition.h"
-#include "Mutex.h"
-#include "Thread.h"
+#include "convey/base/Condition.h"
+#include "convey/base/Mutex.h"
+#include "convey/base/Thread.h"
 
 #include <deque>
 #include <memory>  // unique_ptr

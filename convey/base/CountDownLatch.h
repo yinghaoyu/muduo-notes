@@ -1,8 +1,8 @@
-#ifndef CONVEY_COUNTDOWNLATCH_H
-#define CONVEY_COUNTDOWNLATCH_H
+#ifndef CONVEY_BASE_COUNTDOWNLATCH_H
+#define CONVEY_BASE_COUNTDOWNLATCH_H
 
-#include "Condition.h"
-#include "Mutex.h"
+#include "convey/base/Condition.h"
+#include "convey/base/Mutex.h"
 
 namespace convey
 {

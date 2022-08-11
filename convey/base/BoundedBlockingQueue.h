@@ -1,8 +1,8 @@
-#ifndef CONVEY_BOUNDEDBLOCKINGQUEUE_H
-#define CONVEY_BOUNDEDBLOCKINGQUEUE_H
+#ifndef CONVEY_BASE_BOUNDEDBLOCKINGQUEUE_H
+#define CONVEY_BASE_BOUNDEDBLOCKINGQUEUE_H
 
-#include "Condition.h"
-#include "Mutex.h"
+#include "convey/base/Condition.h"
+#include "convey/base/Mutex.h"
 
 #include <assert.h>
 #include <boost/circular_buffer.hpp>

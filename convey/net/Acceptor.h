@@ -3,8 +3,8 @@
 
 #include <functional>
 
-#include "../net/Channel.h"
-#include "../net/Socket.h"
+#include "convey/net/Channel.h"
+#include "convey/net/Socket.h"
 
 namespace convey
 {

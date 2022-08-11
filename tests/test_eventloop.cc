@@ -1,5 +1,5 @@
-#include "../convey/base/Thread.h"
-#include "../convey/net/EventLoop.h"
+#include "convey/base/Thread.h"
+#include "convey/net/EventLoop.h"
 
 #include <assert.h>
 #include <stdio.h>

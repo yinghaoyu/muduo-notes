@@ -1,9 +1,9 @@
-#include "../../net/http/HttpServer.h"
+#include "convey/net/http/HttpServer.h"
 
-#include "../../base/Logging.h"
-#include "../../net/http/HttpContext.h"
-#include "../../net/http/HttpRequest.h"
-#include "../../net/http/HttpResponse.h"
+#include "convey/base/Logging.h"
+#include "convey/net/http/HttpContext.h"
+#include "convey/net/http/HttpRequest.h"
+#include "convey/net/http/HttpResponse.h"
 
 using namespace convey;
 using namespace convey::net;

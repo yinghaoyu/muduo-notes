@@ -1,9 +1,9 @@
 #ifndef CONVEY_NET_HTTP_HTTPCONTEXT_H
 #define CONVEY_NET_HTTP_HTTPCONTEXT_H
 
-#include "../../base/copyable.h"
+#include "convey/base/copyable.h"
 
-#include "../../net/http/HttpRequest.h"
+#include "convey/net/http/HttpRequest.h"
 
 namespace convey
 {

@@ -1,7 +1,7 @@
-#ifndef CONVEY_CUEERNTTHREAD_H
-#define CONVEY_CUEERNTTHREAD_H
+#ifndef CONVEY_BASE_CUEERNTTHREAD_H
+#define CONVEY_BASE_CUEERNTTHREAD_H
 
-#include "Types.h"
+#include "convey/base/Types.h"
 
 namespace convey
 {

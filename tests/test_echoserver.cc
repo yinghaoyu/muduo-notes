@@ -1,9 +1,9 @@
-#include "../convey/net/TcpServer.h"
+#include "convey/net/TcpServer.h"
 
-#include "../convey/base/Logging.h"
-#include "../convey/base/Thread.h"
-#include "../convey/net/EventLoop.h"
-#include "../convey/net/InetAddress.h"
+#include "convey/base/Logging.h"
+#include "convey/base/Thread.h"
+#include "convey/net/EventLoop.h"
+#include "convey/net/InetAddress.h"
 
 #include <utility>
 

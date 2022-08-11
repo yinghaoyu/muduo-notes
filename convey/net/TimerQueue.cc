@@ -2,11 +2,11 @@
 #define __STDC_LIMIT_MACROS
 #endif
 
-#include "../net/TimerQueue.h"
-#include "../base/Logging.h"
-#include "../net/EventLoop.h"
-#include "../net/Timer.h"
-#include "../net/TimerId.h"
+#include "convey/net/TimerQueue.h"
+#include "convey/base/Logging.h"
+#include "convey/net/EventLoop.h"
+#include "convey/net/Timer.h"
+#include "convey/net/TimerId.h"
 
 #include <sys/timerfd.h>
 #include <unistd.h>

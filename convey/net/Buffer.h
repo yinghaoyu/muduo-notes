@@ -1,11 +1,11 @@
 #ifndef CONVEY_NET_BUFFER_H
 #define CONVEY_NET_BUFFER_H
 
-#include "../base/StringPiece.h"
-#include "../base/Types.h"
-#include "../base/copyable.h"
+#include "convey/base/StringPiece.h"
+#include "convey/base/Types.h"
+#include "convey/base/copyable.h"
 
-#include "../net/Endian.h"
+#include "convey/net/Endian.h"
 
 #include <algorithm>
 #include <vector>

@@ -1,7 +1,7 @@
 #ifndef CONVEY_NET_POLLER_POLLPOLLER_H
 #define CONVEY_NET_POLLER_POLLPOLLER_H
 
-#include "../../net/Poller.h"
+#include "convey/net/Poller.h"
 
 #include <vector>
 

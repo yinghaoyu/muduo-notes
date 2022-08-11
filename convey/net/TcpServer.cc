@@ -1,10 +1,10 @@
-#include "../net/TcpServer.h"
+#include "convey/net/TcpServer.h"
 
-#include "../base/Logging.h"
-#include "../net/Acceptor.h"
-#include "../net/EventLoop.h"
-#include "../net/EventLoopThreadPool.h"
-#include "../net/SocketsOps.h"
+#include "convey/base/Logging.h"
+#include "convey/net/Acceptor.h"
+#include "convey/net/EventLoop.h"
+#include "convey/net/EventLoopThreadPool.h"
+#include "convey/net/SocketsOps.h"
 
 #include <stdio.h>  // snprintf
 

@@ -1,7 +1,7 @@
 #ifndef CONVEY_NET_SOCKET_H
 #define CONVEY_NET_SOCKET_H
 
-#include "../base/noncopyable.h"
+#include "convey/base/noncopyable.h"
 
 // struct tcp_info is in <netinet/tcp.h>
 struct tcp_info;

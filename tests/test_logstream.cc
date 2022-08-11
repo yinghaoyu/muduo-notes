@@ -1,5 +1,5 @@
-#include "../convey/base/LogStream.h"
-#include "../convey/base/Timestamp.h"
+#include "convey/base/LogStream.h"
+#include "convey/base/Timestamp.h"
 
 #include <stdio.h>
 #include <sstream>

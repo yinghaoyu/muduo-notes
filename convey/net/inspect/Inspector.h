@@ -1,9 +1,9 @@
 #ifndef CONVEY_NET_INSPECT_INSPECTOR_H
 #define CONVEY_NET_INSPECT_INSPECTOR_H
 
-#include "../../base/Mutex.h"
-#include "../http/HttpRequest.h"
-#include "../http/HttpServer.h"
+#include "convey/base/Mutex.h"
+#include "convey/net/http/HttpRequest.h"
+#include "convey/net/http/HttpServer.h"
 
 #include <map>
 

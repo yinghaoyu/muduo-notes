@@ -1,8 +1,8 @@
 #ifndef CONVEY_BASE_LOGFILE_H
 #define CONVEY_BASE_LOGFILE_H
 
-#include "../../convey/base/Mutex.h"
-#include "../../convey/base/Types.h"
+#include "convey/base/Mutex.h"
+#include "convey/base/Types.h"
 
 #include <memory>
 

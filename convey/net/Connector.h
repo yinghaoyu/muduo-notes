@@ -1,8 +1,8 @@
 #ifndef CONVEY_NET_CONNECTOR_H
 #define CONVEY_NET_CONNECTOR_H
 
-#include "../base/noncopyable.h"
-#include "../net/InetAddress.h"
+#include "convey/base/noncopyable.h"
+#include "convey/net/InetAddress.h"
 
 #include <functional>
 #include <memory>

@@ -1,8 +1,8 @@
 // TcpClient destructs in a different thread.
 
-#include "../convey/base/Logging.h"
-#include "../convey/net/EventLoopThread.h"
-#include "../convey/net/TcpClient.h"
+#include "convey/base/Logging.h"
+#include "convey/net/EventLoopThread.h"
+#include "convey/net/TcpClient.h"
 
 using namespace convey;
 using namespace convey::net;

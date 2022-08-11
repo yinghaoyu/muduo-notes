@@ -1,7 +1,7 @@
-#include "../convey/base/CountDownLatch.h"
-#include "../convey/base/Mutex.h"
-#include "../convey/base/Thread.h"
-#include "../convey/base/Timestamp.h"
+#include "convey/base/CountDownLatch.h"
+#include "convey/base/Mutex.h"
+#include "convey/base/Thread.h"
+#include "convey/base/Timestamp.h"
 
 #include <stdio.h>
 #include <memory>

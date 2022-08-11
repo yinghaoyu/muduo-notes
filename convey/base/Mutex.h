@@ -1,11 +1,11 @@
-#ifndef MUTEX_H
-#define MUTEX_H
+#ifndef CONVEY_BASE_MUTEX_H
+#define CONVEY_BASE_MUTEX_H
 
 #include <assert.h>
 #include <pthread.h>
 
-#include "CurrentThread.h"
-#include "noncopyable.h"
+#include "convey/base/CurrentThread.h"
+#include "convey/base/noncopyable.h"
 
 #define MCHECK(ret)      \
   ({                     \

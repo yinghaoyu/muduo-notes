@@ -1,12 +1,12 @@
 #ifndef CONVEY_NET_TCPCONNECTION_H
 #define CONVEY_NET_TCPCONNECTION_H
 
-#include "../base/StringPiece.h"
-#include "../base/Types.h"
-#include "../base/noncopyable.h"
-#include "../net/Buffer.h"
-#include "../net/Callbacks.h"
-#include "../net/InetAddress.h"
+#include "convey/base/StringPiece.h"
+#include "convey/base/Types.h"
+#include "convey/base/noncopyable.h"
+#include "convey/net/Buffer.h"
+#include "convey/net/Callbacks.h"
+#include "convey/net/InetAddress.h"
 
 #include <memory>
 

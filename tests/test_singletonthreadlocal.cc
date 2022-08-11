@@ -1,7 +1,7 @@
-#include "../convey/base/CurrentThread.h"
-#include "../convey/base/Singleton.h"
-#include "../convey/base/Thread.h"
-#include "../convey/base/ThreadLocal.h"
+#include "convey/base/CurrentThread.h"
+#include "convey/base/Singleton.h"
+#include "convey/base/Thread.h"
+#include "convey/base/ThreadLocal.h"
 
 #include <stdio.h>
 #include <unistd.h>

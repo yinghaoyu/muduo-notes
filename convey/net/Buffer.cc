@@ -1,6 +1,6 @@
-#include "../net/Buffer.h"
+#include "convey/net/Buffer.h"
 
-#include "../net/SocketsOps.h"
+#include "convey/net/SocketsOps.h"
 
 #include <errno.h>
 #include <sys/uio.h>

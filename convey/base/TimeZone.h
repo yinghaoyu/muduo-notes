@@ -1,9 +1,9 @@
-#ifndef CONVEY_TIMEZONE_H
-#define CONVEY_TIMEZONE_H
+#ifndef CONVEY_BASE_TIMEZONE_H
+#define CONVEY_BASE_TIMEZONE_H
 
 #include <time.h>
 #include <memory>
-#include "copyable.h"
+#include "convey/base/copyable.h"
 
 namespace convey
 {

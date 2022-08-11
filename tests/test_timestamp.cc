@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <vector>
-#include "../convey/base/Timestamp.h"
+#include "convey/base/Timestamp.h"
 
 using convey::Timestamp;
 

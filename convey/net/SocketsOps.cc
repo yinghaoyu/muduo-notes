@@ -1,8 +1,8 @@
-#include "../net/SocketsOps.h"
+#include "convey/net/SocketsOps.h"
 
-#include "../base/Logging.h"
-#include "../base/Types.h"
-#include "../net/Endian.h"
+#include "convey/base/Logging.h"
+#include "convey/base/Types.h"
+#include "convey/net/Endian.h"
 
 #include <errno.h>
 #include <fcntl.h>

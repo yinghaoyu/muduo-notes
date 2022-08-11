@@ -1,5 +1,5 @@
-#include "Exception.h"
-#include "CurrentThread.h"
+#include "convey/base/Exception.h"
+#include "convey/base/CurrentThread.h"
 
 namespace convey
 {

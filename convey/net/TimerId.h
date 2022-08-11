@@ -1,7 +1,7 @@
 #ifndef CONVEY_NET_TIMERID_H
 #define CONVEY_NET_TIMERID_H
 
-#include "../base/copyable.h"
+#include "convey/base/copyable.h"
 
 namespace convey
 {

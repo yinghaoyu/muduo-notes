@@ -4,10 +4,10 @@
 #include <set>
 #include <vector>
 
-#include "../base/Mutex.h"
-#include "../base/Timestamp.h"
-#include "../net/Callbacks.h"
-#include "../net/Channel.h"
+#include "convey/base/Mutex.h"
+#include "convey/base/Timestamp.h"
+#include "convey/net/Callbacks.h"
+#include "convey/net/Channel.h"
 
 namespace convey
 {

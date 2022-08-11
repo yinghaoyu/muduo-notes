@@ -1,6 +1,6 @@
-#include "../net/Channel.h"
-#include "../base/Logging.h"
-#include "../net/EventLoop.h"
+#include "convey/net/Channel.h"
+#include "convey/base/Logging.h"
+#include "convey/net/EventLoop.h"
 
 #include <sstream>
 

@@ -1,7 +1,7 @@
 #ifndef CONVEY_NET_HTTP_HTTPSERVER_H
 #define CONVEY_NET_HTTP_HTTPSERVER_H
 
-#include "../../net/TcpServer.h"
+#include "convey/net/TcpServer.h"
 
 namespace convey
 {

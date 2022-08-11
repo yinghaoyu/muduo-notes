@@ -1,8 +1,8 @@
 #ifndef CONVEY_NET_HTTP_HTTPRESPONSE_H
 #define CONVEY_NET_HTTP_HTTPRESPONSE_H
 
-#include "../../base/Types.h"
-#include "../../base/copyable.h"
+#include "convey/base/Types.h"
+#include "convey/base/copyable.h"
 
 #include <map>
 

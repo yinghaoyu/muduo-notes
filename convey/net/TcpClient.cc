@@ -1,9 +1,9 @@
-#include "../net/TcpClient.h"
+#include "convey/net/TcpClient.h"
 
-#include "../base/Logging.h"
-#include "../net/Connector.h"
-#include "../net/EventLoop.h"
-#include "../net/SocketsOps.h"
+#include "convey/base/Logging.h"
+#include "convey/net/Connector.h"
+#include "convey/net/EventLoop.h"
+#include "convey/net/SocketsOps.h"
 
 #include <stdio.h>  // snprintf
 

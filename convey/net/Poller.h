@@ -4,8 +4,8 @@
 #include <map>
 #include <vector>
 
-#include "../base/Timestamp.h"
-#include "../net/EventLoop.h"
+#include "convey/base/Timestamp.h"
+#include "convey/net/EventLoop.h"
 
 namespace convey
 {

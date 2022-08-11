@@ -1,4 +1,4 @@
-#include "LogStream.h"
+#include "convey/base/LogStream.h"
 
 #include <assert.h>
 #include <stdint.h>

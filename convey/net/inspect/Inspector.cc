@@ -1,13 +1,13 @@
-#include "../../net/inspect/Inspector.h"
+#include "convey/net/inspect/Inspector.h"
 
-#include "../../base/Logging.h"
-#include "../../base/Thread.h"
-#include "../../net/EventLoop.h"
-#include "../../net/http/HttpRequest.h"
-#include "../../net/http/HttpResponse.h"
-#include "../../net/inspect/PerformanceInspector.h"
-#include "../../net/inspect/ProcessInspector.h"
-#include "../../net/inspect/SystemInspector.h"
+#include "convey/base/Logging.h"
+#include "convey/base/Thread.h"
+#include "convey/net/EventLoop.h"
+#include "convey/net/http/HttpRequest.h"
+#include "convey/net/http/HttpResponse.h"
+#include "convey/net/inspect/PerformanceInspector.h"
+#include "convey/net/inspect/ProcessInspector.h"
+#include "convey/net/inspect/SystemInspector.h"
 
 //#include <iostream>
 //#include <iterator>

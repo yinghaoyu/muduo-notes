@@ -1,7 +1,7 @@
-#include "../../net/poller/EPollPoller.h"
+#include "convey/net/poller/EPollPoller.h"
 
-#include "../../base/Logging.h"
-#include "../../net/Channel.h"
+#include "convey/base/Logging.h"
+#include "convey/net/Channel.h"
 
 #include <assert.h>
 #include <errno.h>

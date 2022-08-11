@@ -1,7 +1,7 @@
-#include "../../convey/base/LogFile.h"
+#include "convey/base/LogFile.h"
 
-#include "../../convey/base/FileUtil.h"
-#include "../../convey/base/ProcessInfo.h"
+#include "convey/base/FileUtil.h"
+#include "convey/base/ProcessInfo.h"
 
 #include <assert.h>
 #include <stdio.h>

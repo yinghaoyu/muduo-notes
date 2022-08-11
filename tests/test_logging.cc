@@ -1,7 +1,7 @@
-#include "../convey/base/LogFile.h"
-#include "../convey/base/Logging.h"
-#include "../convey/base/ThreadPool.h"
-#include "../convey/base/TimeZone.h"
+#include "convey/base/LogFile.h"
+#include "convey/base/Logging.h"
+#include "convey/base/ThreadPool.h"
+#include "convey/base/TimeZone.h"
 
 #include <stdio.h>
 #include <unistd.h>

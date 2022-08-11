@@ -1,7 +1,7 @@
 #ifndef CONVEY_NET_INSPECT_PERFORMANCEINSPECTOR_H
 #define CONVEY_NET_INSPECT_PERFORMANCEINSPECTOR_H
 
-#include "../../net/inspect/Inspector.h"
+#include "convey/net/inspect/Inspector.h"
 
 namespace convey
 {

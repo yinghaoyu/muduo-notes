@@ -1,6 +1,6 @@
-#include "../../net/Poller.h"
-#include "../../net/poller/EPollPoller.h"
-#include "../../net/poller/PollPoller.h"
+#include "convey/net/Poller.h"
+#include "convey/net/poller/EPollPoller.h"
+#include "convey/net/poller/PollPoller.h"
 
 #include <stdlib.h>
 

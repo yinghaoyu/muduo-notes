@@ -1,7 +1,7 @@
-#ifndef CONVEY_EXCEPTION_H
-#define CONVEY_EXCEPTION_H
+#ifndef CONVEY_BASE_EXCEPTION_H
+#define CONVEY_BASE_EXCEPTION_H
 
-#include "Types.h"
+#include "convey/base/Types.h"
 
 #include <exception>
 

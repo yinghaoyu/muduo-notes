@@ -1,9 +1,9 @@
-#ifndef CONVEY_THREAD_H
-#define CONVEY_THREAD_H
+#ifndef CONVEY_BASE_THREAD_H
+#define CONVEY_BASE_THREAD_H
 
-#include "Atomic.h"
-#include "CountDownLatch.h"
-#include "noncopyable.h"
+#include "convey/base/Atomic.h"
+#include "convey/base/CountDownLatch.h"
+#include "convey/base/noncopyable.h"
 
 #include <pthread.h>
 #include <functional>

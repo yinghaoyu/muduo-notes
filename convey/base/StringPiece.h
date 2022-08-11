@@ -43,7 +43,7 @@
 #include <string.h>
 #include <iosfwd>  // for ostream forward-declaration
 
-#include "Types.h"
+#include "convey/base/Types.h"
 
 namespace convey
 {

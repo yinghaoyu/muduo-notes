@@ -1,5 +1,5 @@
-#include "../../net/http/HttpContext.h"
-#include "../../net/Buffer.h"
+#include "convey/net/http/HttpContext.h"
+#include "convey/net/Buffer.h"
 
 using namespace convey;
 using namespace convey::net;

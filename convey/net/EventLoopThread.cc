@@ -1,6 +1,6 @@
-#include "../net/EventLoopThread.h"
+#include "convey/net/EventLoopThread.h"
 
-#include "../net/EventLoop.h"
+#include "convey/net/EventLoop.h"
 
 using namespace convey;
 using namespace convey::net;

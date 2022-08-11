@@ -1,9 +1,9 @@
 #ifndef CONVEY_NET_TIMER_H
 #define CONVEY_NET_TIMER_H
 
-#include "../base/Atomic.h"
-#include "../base/Timestamp.h"
-#include "../net/Callbacks.h"
+#include "convey/base/Atomic.h"
+#include "convey/base/Timestamp.h"
+#include "convey/net/Callbacks.h"
 
 namespace convey
 {
