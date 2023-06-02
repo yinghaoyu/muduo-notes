@@ -1,3 +1,4 @@
+/build
 /.clangd
 /release-cpp11
 compile_commands.json

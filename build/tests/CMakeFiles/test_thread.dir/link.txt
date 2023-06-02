@@ -1,1 +1,0 @@
-/usr/bin/g++  -ggdb -Wall -Wextra -Werror -Wconversion -Wno-unused-parameter -Wold-style-cast -Woverloaded-virtual -Wshadow -Wpointer-arith -Wwrite-strings -std=c++11 -march=native -O2 -DNDEBUG  -rdynamic CMakeFiles/test_thread.dir/test_thread.cc.o  -o ../bin/test_thread  ../lib/libmuduo_base.a -lpthread -lrt 
