@@ -1,8 +1,8 @@
-#include "convey/base/BlockingQueue.h"
-#include "convey/base/CountDownLatch.h"
-#include "convey/base/Logging.h"
-#include "convey/base/Thread.h"
-#include "convey/base/Timestamp.h"
+#include "muduo/base/BlockingQueue.h"
+#include "muduo/base/CountDownLatch.h"
+#include "muduo/base/Logging.h"
+#include "muduo/base/Thread.h"
+#include "muduo/base/Timestamp.h"
 
 #include <stdio.h>
 #include <unistd.h>
@@ -25,7 +25,7 @@ class Bench
     {
       char name[32];
       snprintf(name, sizeof name, "work thread %d", i);
-      threads_.emplace_back(new convey::Thread(std::bind(&Bench::threadFunc, this), convey::string(name)));
+      threads_.emplace_back(new muduo::Thread(std::bind(&Bench::threadFunc, this), muduo::string(name)));
     }
     for (auto &thr : threads_)
     {
@@ -41,7 +41,7 @@ class Bench
     int64_t total_delay = 0;
     for (int i = 0; i < times; ++i)
     {
-      convey::Timestamp now(convey::Timestamp::now());
+      muduo::Timestamp now(muduo::Timestamp::now());
       queue_.put(now);
       total_delay += delay_queue_.take();
     }
@@ -53,7 +53,7 @@ class Bench
     // 非法的时间戳数量等于子线程数量，这样能让子线程全部正常结束
     for (size_t i = 0; i < threads_.size(); ++i)
     {
-      queue_.put(convey::Timestamp::invalid());
+      queue_.put(muduo::Timestamp::invalid());
     }
 
     for (auto &thr : threads_)
@@ -69,7 +69,7 @@ class Bench
   {
     if (g_verbose)
     {
-      printf("tid=%d, %s started\n", convey::CurrentThread::tid(), convey::CurrentThread::name());
+      printf("tid=%d, %s started\n", muduo::CurrentThread::tid(), muduo::CurrentThread::name());
     }
 
     std::map<int, int> delays;
@@ -77,13 +77,13 @@ class Bench
     bool running = true;
     while (running)
     {
-      convey::Timestamp t(queue_.take());  // 从队列取出时间戳
-      convey::Timestamp now(convey::Timestamp::now());
+      muduo::Timestamp t(queue_.take());  // 从队列取出时间戳
+      muduo::Timestamp now(muduo::Timestamp::now());
       if (t.valid())
       {
         int delay = static_cast<int>(timeDifference(now, t) * 1000000);
         // printf("tid=%d, latency = %d us\n",
-        //        convey::CurrentThread::tid(), delay);
+        //        muduo::CurrentThread::tid(), delay);
         ++delays[delay];
         delay_queue_.put(delay);
       }
@@ -92,18 +92,18 @@ class Bench
 
     if (g_verbose)
     {
-      printf("tid=%d, %s stopped\n", convey::CurrentThread::tid(), convey::CurrentThread::name());
+      printf("tid=%d, %s stopped\n", muduo::CurrentThread::tid(), muduo::CurrentThread::name());
       for (const auto &delay : delays)
       {
-        printf("tid = %d, delay = %d, count = %d\n", convey::CurrentThread::tid(), delay.first, delay.second);
+        printf("tid = %d, delay = %d, count = %d\n", muduo::CurrentThread::tid(), delay.first, delay.second);
       }
     }
   }
 
-  convey::BlockingQueue<convey::Timestamp> queue_;
-  convey::BlockingQueue<int> delay_queue_;
-  convey::CountDownLatch latch_;
-  std::vector<std::unique_ptr<convey::Thread>> threads_;
+  muduo::BlockingQueue<muduo::Timestamp> queue_;
+  muduo::BlockingQueue<int> delay_queue_;
+  muduo::CountDownLatch latch_;
+  std::vector<std::unique_ptr<muduo::Thread>> threads_;
 };
 
 int main(int argc, char *argv[])

@@ -1,7 +1,7 @@
-#include "convey/base/LogFile.h"
-#include "convey/base/Logging.h"
-#include "convey/base/ThreadPool.h"
-#include "convey/base/TimeZone.h"
+#include "muduo/base/LogFile.h"
+#include "muduo/base/Logging.h"
+#include "muduo/base/ThreadPool.h"
+#include "muduo/base/TimeZone.h"
 
 #include <stdio.h>
 #include <unistd.h>
@@ -9,7 +9,7 @@
 
 int g_total;
 FILE *g_file;
-std::unique_ptr<convey::LogFile> g_logFile;
+std::unique_ptr<muduo::LogFile> g_logFile;
 
 void dummyOutput(const char *msg, int len)
 {
@@ -26,21 +26,21 @@ void dummyOutput(const char *msg, int len)
 
 void bench(const char *type)
 {
-  convey::Logger::setOutput(dummyOutput);
-  convey::Timestamp start(convey::Timestamp::now());
+  muduo::Logger::setOutput(dummyOutput);
+  muduo::Timestamp start(muduo::Timestamp::now());
   g_total = 0;
 
   int n = 1000 * 1000;
   const bool kLongLog = false;
-  convey::string empty = " ";
-  convey::string longStr(3000, 'X');
+  muduo::string empty = " ";
+  muduo::string longStr(3000, 'X');
   longStr += " ";
   for (int i = 0; i < n; ++i)
   {
     LOG_INFO << "Hello 0123456789"
              << " abcdefghijklmnopqrstuvwxyz" << (kLongLog ? longStr : empty) << i;
   }
-  convey::Timestamp end(convey::Timestamp::now());
+  muduo::Timestamp end(muduo::Timestamp::now());
   double seconds = timeDifference(end, start);
   printf("%12s: %f seconds, %d bytes, %10.2f msg/s, %.2f MiB/s\n", type, seconds, g_total, n / seconds, g_total / seconds / (1024 * 1024));
 }
@@ -55,7 +55,7 @@ int main()
 {
   getppid();  // for ltrace and strace
 
-  convey::ThreadPool pool("pool");
+  muduo::ThreadPool pool("pool");
   pool.start(5);
   pool.run(logInThread);
   pool.run(logInThread);
@@ -68,10 +68,10 @@ int main()
   LOG_INFO << "Hello";  // 默认是INFO等级，低于INFO的上述两条不打印
   LOG_WARN << "World";
   LOG_ERROR << "Error";
-  LOG_INFO << sizeof(convey::Logger);
-  LOG_INFO << sizeof(convey::LogStream);
-  LOG_INFO << sizeof(convey::Fmt);
-  LOG_INFO << sizeof(convey::LogStream::Buffer);
+  LOG_INFO << sizeof(muduo::Logger);
+  LOG_INFO << sizeof(muduo::LogStream);
+  LOG_INFO << sizeof(muduo::Fmt);
+  LOG_INFO << sizeof(muduo::LogStream::Buffer);
 
   sleep(1);
   // 测试写入不同文件的时间
@@ -92,18 +92,18 @@ int main()
 
   g_file = NULL;
   // 写入LogFile的时间
-  g_logFile.reset(new convey::LogFile("test_log_st", 500 * 1000 * 1000, false));
+  g_logFile.reset(new muduo::LogFile("test_log_st", 500 * 1000 * 1000, false));
   bench("test_log_st");
 
-  g_logFile.reset(new convey::LogFile("test_log_mt", 500 * 1000 * 1000, true));
+  g_logFile.reset(new muduo::LogFile("test_log_mt", 500 * 1000 * 1000, true));
   bench("test_log_mt");
   g_logFile.reset();
 
   {
     g_file = stdout;
     sleep(1);
-    convey::TimeZone beijing(8 * 3600, "CST");
-    convey::Logger::setTimeZone(beijing);
+    muduo::TimeZone beijing(8 * 3600, "CST");
+    muduo::Logger::setTimeZone(beijing);
     LOG_TRACE << "trace CST";
     LOG_DEBUG << "debug CST";
     LOG_INFO << "Hello CST";
@@ -111,8 +111,8 @@ int main()
     LOG_ERROR << "Error CST";
 
     sleep(1);
-    convey::TimeZone newyork("/usr/share/zoneinfo/America/New_York");
-    convey::Logger::setTimeZone(newyork);  // 测试时区切换
+    muduo::TimeZone newyork("/usr/share/zoneinfo/America/New_York");
+    muduo::Logger::setTimeZone(newyork);  // 测试时区切换
     LOG_TRACE << "trace NYT";
     LOG_DEBUG << "debug NYT";
     LOG_INFO << "Hello NYT";

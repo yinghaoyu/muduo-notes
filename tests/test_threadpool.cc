@@ -1,14 +1,14 @@
-#include "convey/base/CountDownLatch.h"
-#include "convey/base/CurrentThread.h"
-#include "convey/base/Logging.h"
-#include "convey/base/ThreadPool.h"
+#include "muduo/base/CountDownLatch.h"
+#include "muduo/base/CurrentThread.h"
+#include "muduo/base/Logging.h"
+#include "muduo/base/ThreadPool.h"
 
 #include <stdio.h>
 #include <unistd.h>  // usleep
 
 void print()
 {
-  printf("tid=%d\n", convey::CurrentThread::tid());
+  printf("tid=%d\n", muduo::CurrentThread::tid());
 }
 
 void printString(const std::string &str)
@@ -20,7 +20,7 @@ void printString(const std::string &str)
 void test(int maxSize)
 {
   LOG_WARN << "Test ThreadPool with max queue size = " << maxSize;
-  convey::ThreadPool pool("MainThreadPool");
+  muduo::ThreadPool pool("MainThreadPool");
   pool.setMaxQueueSize(maxSize);
   pool.start(5);
 
@@ -35,8 +35,8 @@ void test(int maxSize)
   }
   LOG_WARN << "Done";
 
-  convey::CountDownLatch latch(1);
-  pool.run(std::bind(&convey::CountDownLatch::countDown, &latch));
+  muduo::CountDownLatch latch(1);
+  pool.run(std::bind(&muduo::CountDownLatch::countDown, &latch));
   latch.wait();
   pool.stop();
 }
@@ -45,10 +45,10 @@ void test(int maxSize)
  * Wish we could do this in the future.
 void testMove()
 {
-  convey::ThreadPool pool;
+  muduo::ThreadPool pool;
   pool.start(2);
   std::unique_ptr<int> x(new int(42));
-  pool.run([y = std::move(x)]{ printf("%d: %d\n", convey::CurrentThread::tid(), *y); });
+  pool.run([y = std::move(x)]{ printf("%d: %d\n", muduo::CurrentThread::tid(), *y); });
   pool.stop();
 }
 */
@@ -56,18 +56,19 @@ void testMove()
 void longTask(int num)
 {
   LOG_INFO << "longTask " << num;
-  convey::CurrentThread::sleepUsec(3000000);
+  muduo::CurrentThread::sleepUsec(3000000);
 }
 
 void test2()
 {
   LOG_WARN << "Test ThreadPool by stoping early.";
-  convey::ThreadPool pool("ThreadPool");
+  muduo::ThreadPool pool("ThreadPool");
   pool.setMaxQueueSize(5);
   pool.start(3);
 
-  convey::Thread thread1(
-      [&pool]() {
+  muduo::Thread thread1(
+      [&pool]()
+      {
         for (int i = 0; i < 20; ++i)
         {
           pool.run(std::bind(longTask, i));
@@ -76,7 +77,7 @@ void test2()
       "thread1");
   thread1.start();
 
-  convey::CurrentThread::sleepUsec(5000000);
+  muduo::CurrentThread::sleepUsec(5000000);
   LOG_WARN << "stop pool";
   pool.stop();  // early stop
 

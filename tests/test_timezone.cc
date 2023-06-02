@@ -1,16 +1,16 @@
-#include "convey/base/TimeZone.h"
-#include "convey/base/Types.h"
+#include "muduo/base/TimeZone.h"
+#include "muduo/base/Types.h"
 
 #include <assert.h>
 #include <stdio.h>
 #include <string.h>
 
-using convey::TimeZone;
+using muduo::TimeZone;
 
 struct tm getTm(int year, int month, int day, int hour, int minute, int seconds)
 {
   struct tm gmt;
-  convey::memZero(&gmt, sizeof gmt);
+  muduo::memZero(&gmt, sizeof gmt);
   gmt.tm_year = year - 1900;
   gmt.tm_mon = month - 1;
   gmt.tm_mday = day;
@@ -23,7 +23,7 @@ struct tm getTm(int year, int month, int day, int hour, int minute, int seconds)
 struct tm getTm(const char *str)
 {
   struct tm gmt;
-  convey::memZero(&gmt, sizeof gmt);
+  muduo::memZero(&gmt, sizeof gmt);
   strptime(str, "%F %T", &gmt);
   return gmt;
 }

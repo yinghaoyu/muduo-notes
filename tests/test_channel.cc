@@ -1,6 +1,6 @@
-#include "convey/base/Logging.h"
-#include "convey/net/Channel.h"
-#include "convey/net/EventLoop.h"
+#include "muduo/base/Logging.h"
+#include "muduo/net/Channel.h"
+#include "muduo/net/EventLoop.h"
 
 #include <functional>
 #include <map>
@@ -9,8 +9,8 @@
 #include <sys/timerfd.h>
 #include <unistd.h>
 
-using namespace convey;
-using namespace convey::net;
+using namespace muduo;
+using namespace muduo::net;
 
 void print(const char *msg)
 {
@@ -21,7 +21,7 @@ void print(const char *msg)
   last = now;
 }
 
-namespace convey
+namespace muduo
 {
 namespace net
 {
@@ -31,14 +31,14 @@ int createTimerfd();
 void readTimerfd(int timerfd, Timestamp now);
 }  // namespace detail
 }  // namespace net
-}  // namespace convey
+}  // namespace muduo
 
 // Use relative time, immunized to wall clock changes.
 class PeriodicTimer
 {
  public:
   PeriodicTimer(EventLoop *loop, double interval, const TimerCallback &cb)
-      : loop_(loop), timerfd_(convey::net::detail::createTimerfd()), timerfdChannel_(loop, timerfd_), interval_(interval), cb_(cb)
+      : loop_(loop), timerfd_(muduo::net::detail::createTimerfd()), timerfdChannel_(loop, timerfd_), interval_(interval), cb_(cb)
   {
     timerfdChannel_.setReadCallback(std::bind(&PeriodicTimer::handleRead, this));
     timerfdChannel_.enableReading();
@@ -68,7 +68,7 @@ class PeriodicTimer
   void handleRead()
   {
     loop_->assertInLoopThread();
-    convey::net::detail::readTimerfd(timerfd_, Timestamp::now());
+    muduo::net::detail::readTimerfd(timerfd_, Timestamp::now());
     if (cb_)
       cb_();
   }

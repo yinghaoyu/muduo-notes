@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <vector>
-#include "convey/base/Timestamp.h"
+#include "muduo/base/Timestamp.h"
 
-using convey::Timestamp;
+using muduo::Timestamp;
 
 void passByConstReference(const Timestamp &x)
 {

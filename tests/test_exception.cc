@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <functional>
 #include <vector>
-#include "convey/base/CurrentThread.h"
-#include "convey/base/Exception.h"
+#include "muduo/base/CurrentThread.h"
+#include "muduo/base/Exception.h"
 
 class Bar
 {
@@ -12,13 +12,13 @@ class Bar
   void test(std::vector<std::string> names = {})
   {
     // 打印栈，解析函数名
-    printf("Stack:\n%s\n", convey::CurrentThread::stackTrace(true).c_str());
+    printf("Stack:\n%s\n", muduo::CurrentThread::stackTrace(true).c_str());
 
     // lambda表达式的函数
-    [] { printf("Stack inside lambda:\n%s\n", convey::CurrentThread::stackTrace(true).c_str()); }();
+    [] { printf("Stack inside lambda:\n%s\n", muduo::CurrentThread::stackTrace(true).c_str()); }();
 
     // function对象函数
-    std::function<void()> func([] { printf("Stack inside std::function:\n%s\n", convey::CurrentThread::stackTrace(true).c_str()); });
+    std::function<void()> func([] { printf("Stack inside std::function:\n%s\n", muduo::CurrentThread::stackTrace(true).c_str()); });
 
     func();
 
@@ -26,11 +26,11 @@ class Bar
     func = std::bind(&Bar::callback, this);
     func();
 
-    throw convey::Exception("oops");
+    throw muduo::Exception("oops");
   }
 
  private:
-  void callback() { printf("Stack inside std::bind:\n%s\n", convey::CurrentThread::stackTrace(true).c_str()); }
+  void callback() { printf("Stack inside std::bind:\n%s\n", muduo::CurrentThread::stackTrace(true).c_str()); }
 };
 
 void foo()
@@ -45,7 +45,7 @@ int main()
   {
     foo();
   }
-  catch (const convey::Exception &ex)
+  catch (const muduo::Exception &ex)
   {
     printf("reason: %s\n", ex.what());
     printf("stack trace:\n%s\n", ex.stackTrace());

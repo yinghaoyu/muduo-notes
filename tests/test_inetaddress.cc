@@ -1,11 +1,11 @@
-#include "convey/net/InetAddress.h"
+#include "muduo/net/InetAddress.h"
 
-#include "convey/base/Logging.h"
+#include "muduo/base/Logging.h"
 
 #include <assert.h>
 
-using convey::string;
-using convey::net::InetAddress;
+using muduo::string;
+using muduo::net::InetAddress;
 
 void testInetAddress()
 {

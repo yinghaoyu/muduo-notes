@@ -47,8 +47,8 @@ find_package(Boost REQUIRED) # 依赖boost库
 include_directories(${Boost_INCLUDE_DIRS}) # 引入boost库头文件
 include_directories(${PROJECT_SOURCE_DIR})
 
-add_subdirectory(convey/base)
-add_subdirectory(convey/net)
+add_subdirectory(muduo/base)
+add_subdirectory(muduo/net)
 add_subdirectory(tests)
 
 string(TOUPPER ${CMAKE_BUILD_TYPE} BUILD_TYPE) # 将CMAKE_BUILD_TYPE变量字符转为大写

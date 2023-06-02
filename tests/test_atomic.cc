@@ -1,10 +1,10 @@
 #include <assert.h>
-#include "convey/base/Atomic.h"
+#include "muduo/base/Atomic.h"
 
 int main()
 {
   {
-    convey::AtomicInt32 i32;
+    muduo::AtomicInt32 i32;
     assert(i32.get() == 0);
     assert(i32.getAndAdd(1) == 0);
     assert(i32.get() == 1);

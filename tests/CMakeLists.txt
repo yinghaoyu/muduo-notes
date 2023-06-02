@@ -1,81 +1,81 @@
 add_executable(test_thread test_thread.cc)
-target_link_libraries(test_thread convey_base)
+target_link_libraries(test_thread muduo_base)
 
 # 增加测试项，需要开启enable_testing()
 add_executable(test_atomic test_atomic.cc)
 add_test(NAME test_atomic COMMAND test_atomic)
 
 add_executable(test_exception test_exception.cc)
-target_link_libraries(test_exception convey_base)
+target_link_libraries(test_exception muduo_base)
 
 add_executable(test_mutex test_mutex.cc)
-target_link_libraries(test_mutex convey_base)
+target_link_libraries(test_mutex muduo_base)
 
 add_executable(test_singleton test_singleton.cc)
-target_link_libraries(test_singleton convey_base)
+target_link_libraries(test_singleton muduo_base)
 
 add_executable(test_timestamp test_timestamp.cc)
-target_link_libraries(test_timestamp convey_base)
+target_link_libraries(test_timestamp muduo_base)
 
 add_executable(test_blockingqueue1 test_blockingqueue1.cc)
-target_link_libraries(test_blockingqueue1 convey_base)
+target_link_libraries(test_blockingqueue1 muduo_base)
 
 add_executable(test_logging test_logging.cc)
-target_link_libraries(test_logging convey_base)
+target_link_libraries(test_logging muduo_base)
 
 add_executable(test_logstream test_logstream.cc)
-target_link_libraries(test_logstream convey_base)
+target_link_libraries(test_logstream muduo_base)
 
 add_executable(test_asynclogging test_asynclogging.cc)
-target_link_libraries(test_asynclogging convey_base)
+target_link_libraries(test_asynclogging muduo_base)
 
 add_executable(test_processinfo test_processinfo.cc)
-target_link_libraries(test_processinfo convey_base)
+target_link_libraries(test_processinfo muduo_base)
 
 add_executable(test_singletonthreadlocal test_singletonthreadlocal.cc)
-target_link_libraries(test_singletonthreadlocal convey_base)
+target_link_libraries(test_singletonthreadlocal muduo_base)
 
 add_executable(test_timezone test_timezone.cc)
-target_link_libraries(test_timezone convey_base)
+target_link_libraries(test_timezone muduo_base)
 
 add_executable(test_threadpool test_threadpool.cc)
-target_link_libraries(test_threadpool convey_base)
+target_link_libraries(test_threadpool muduo_base)
 
 add_executable(test_timerqueue test_timerqueue.cc)
-target_link_libraries(test_timerqueue convey_net)
+target_link_libraries(test_timerqueue muduo_net)
 
 add_executable(test_channel test_channel.cc)
-target_link_libraries(test_channel convey_net)
+target_link_libraries(test_channel muduo_net)
 
 add_executable(test_eventloop test_eventloop.cc)
-target_link_libraries(test_eventloop convey_net)
+target_link_libraries(test_eventloop muduo_net)
 
 add_executable(test_eventloopthread test_eventloopthread.cc)
-target_link_libraries(test_eventloopthread convey_net)
+target_link_libraries(test_eventloopthread muduo_net)
 
 add_executable(test_eventloopthreadpool test_eventloopthreadpool.cc)
-target_link_libraries(test_eventloopthreadpool convey_net)
+target_link_libraries(test_eventloopthreadpool muduo_net)
 
 add_executable(test_inetaddress test_inetaddress.cc)
-target_link_libraries(test_inetaddress convey_net)
+target_link_libraries(test_inetaddress muduo_net)
 
 add_executable(test_echoserver test_echoserver.cc)
-target_link_libraries(test_echoserver convey_net)
+target_link_libraries(test_echoserver muduo_net)
 
 add_executable(test_echoclient test_echoclient.cc)
-target_link_libraries(test_echoclient convey_net)
+target_link_libraries(test_echoclient muduo_net)
 
 add_executable(test_tcpclient_reg1 test_tcpclient_reg1.cc)
-target_link_libraries(test_tcpclient_reg1 convey_net)
+target_link_libraries(test_tcpclient_reg1 muduo_net)
 
 add_executable(test_tcpclient_reg2 test_tcpclient_reg2.cc)
-target_link_libraries(test_tcpclient_reg2 convey_net)
+target_link_libraries(test_tcpclient_reg2 muduo_net)
 
 add_executable(test_tcpclient_reg3 test_tcpclient_reg3.cc)
-target_link_libraries(test_tcpclient_reg3 convey_net)
+target_link_libraries(test_tcpclient_reg3 muduo_net)
 
 add_executable(test_httpserver test_httpserver.cc)
-target_link_libraries(test_httpserver convey_http)
+target_link_libraries(test_httpserver muduo_http)
 
 add_executable(test_inspector test_inspector.cc)
-target_link_libraries(test_inspector convey_inspect)
+target_link_libraries(test_inspector muduo_inspect)

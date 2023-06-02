@@ -1,14 +1,14 @@
-#include "convey/base/Logging.h"
-#include "convey/net/EventLoop.h"
-#include "convey/net/http/HttpRequest.h"
-#include "convey/net/http/HttpResponse.h"
-#include "convey/net/http/HttpServer.h"
+#include "muduo/base/Logging.h"
+#include "muduo/net/EventLoop.h"
+#include "muduo/net/http/HttpRequest.h"
+#include "muduo/net/http/HttpResponse.h"
+#include "muduo/net/http/HttpServer.h"
 
 #include <iostream>
 #include <map>
 
-using namespace convey;
-using namespace convey::net;
+using namespace muduo;
+using namespace muduo::net;
 
 extern char favicon[555];
 bool benchmark = false;
@@ -30,7 +30,7 @@ void onRequest(const HttpRequest &req, HttpResponse *resp)
     resp->setStatusCode(HttpResponse::k200Ok);
     resp->setStatusMessage("OK");
     resp->setContentType("text/html");
-    resp->addHeader("Server", "convey");
+    resp->addHeader("Server", "muduo");
     string now = Timestamp::now().toFormattedString();
     resp->setBody(
         "<html><head><title>This is title</title></head>"
@@ -49,7 +49,7 @@ void onRequest(const HttpRequest &req, HttpResponse *resp)
     resp->setStatusCode(HttpResponse::k200Ok);
     resp->setStatusMessage("OK");
     resp->setContentType("text/plain");
-    resp->addHeader("Server", "convey");
+    resp->addHeader("Server", "muduo");
     resp->setBody("hello, world!\n");
   }
   else
